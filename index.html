@@ -5,12 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="/public/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Ode</title>
 </head>
 <body>
-    <h1 class="text-3xl font-bold underline">Hello!</h1>
-    <h1>Hello!</h1>
+    <main>
+        <section class="min-h-screen bg-slate-500">
+            <nav class="sticky top-5 max-w-[160px] mx-auto px-3 bg-slate-800 text-white rounded-full shadow-md
+            border-b-2 border-white flex flex-row flex-wrap gap-1 place-content-between">
+                <a href="#home">Home</a>
+
+                <div id="menu" class="hidden">
+                    <a href="#">Introdução</a>
+                    <a href="#">Sobre ti...</a>
+                    <a href="#">Nossa história</a>
+                    <a href="#">Motivação</a>
+                    <a href="#">Entretenimento</a>
+                </div>
+
+                <a href="javascript:void(0);" onclick="showDropdown()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+        </section>
+    </main>
+
+    <script src="src/script.js"></script>
 </body>
 </html>
