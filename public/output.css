@@ -513,20 +513,8 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.relative {
-  position: relative;
-}
-
 .sticky {
   position: sticky;
-}
-
-.top-0 {
-  top: 0px;
-}
-
-.top-10 {
-  top: 2.5rem;
 }
 
 .top-5 {
@@ -546,25 +534,20 @@ video {
   display: none;
 }
 
+.h-12 {
+  height: 3rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
 
-.min-w-fit {
-  min-width: -moz-fit-content;
-  min-width: fit-content;
+.w-4\/6 {
+  width: 66.666667%;
 }
 
-.min-w-full {
-  min-width: 100%;
-}
-
-.max-w-md {
-  max-width: 28rem;
-}
-
-.max-w-xs {
-  max-width: 20rem;
+.w-screen {
+  width: 100vw;
 }
 
 .max-w-\[160px\] {
@@ -591,71 +574,56 @@ video {
   place-content: space-between;
 }
 
-.justify-center {
-  justify-content: center;
-}
-
-.gap-6 {
-  gap: 1.5rem;
-}
-
-.gap-11 {
-  gap: 2.75rem;
-}
-
-.gap-2 {
-  gap: 0.5rem;
+.items-center {
+  align-items: center;
 }
 
 .gap-1 {
   gap: 0.25rem;
 }
 
+.gap-12 {
+  gap: 3rem;
+}
+
+.gap-20 {
+  gap: 5rem;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
 
-.border-b-8 {
-  border-bottom-width: 8px;
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 
 .border-b-2 {
   border-bottom-width: 2px;
 }
 
-.border-white {
+.border-custom-purple {
   --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  border-color: rgb(103 65 136 / var(--tw-border-opacity));
 }
 
-.bg-slate-600 {
+.bg-bg-color {
   --tw-bg-opacity: 1;
-  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+  background-color: rgb(255 251 245 / var(--tw-bg-opacity));
 }
 
-.bg-slate-400 {
+.bg-custom-light-purple {
   --tw-bg-opacity: 1;
-  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
+  background-color: rgb(195 172 208 / var(--tw-bg-opacity));
 }
 
-.bg-slate-200 {
+.bg-custom-purple {
   --tw-bg-opacity: 1;
-  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+  background-color: rgb(103 65 136 / var(--tw-bg-opacity));
 }
 
-.bg-slate-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
-}
-
-.bg-slate-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
-}
-
-.bg-slate-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+.bg-cover {
+  background-size: cover;
 }
 
 .px-3 {
@@ -663,18 +631,62 @@ video {
   padding-right: 0.75rem;
 }
 
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+.text-center {
+  text-align: center;
 }
 
-.text-white {
+.align-middle {
+  vertical-align: middle;
+}
+
+.text-custom-bege {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(247 239 229 / var(--tw-text-opacity));
+}
+
+.text-font-color {
+  --tw-text-opacity: 1;
+  color: rgb(58 36 77 / var(--tw-text-opacity));
 }
 
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.btn:hover {
+  --tw-text-opacity: 1;
+  color: rgb(195 172 208 / var(--tw-text-opacity));
+}
+
+.line-break {
+  width: 25%;
+  border-radius: 9999px;
+  border-width: 4px;
+  --tw-border-opacity: 1;
+  border-color: rgb(103 65 136 / var(--tw-border-opacity));
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.title-box {
+  height: 2.5rem;
+  border-radius: 9999px;
+  border-bottom-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(103 65 136 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(195 172 208 / var(--tw-bg-opacity));
+  font-size: 1.5rem;
+  line-height: 2rem;
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.active\:text-custom-bege:active {
+  --tw-text-opacity: 1;
+  color: rgb(247 239 229 / var(--tw-text-opacity));
 }
