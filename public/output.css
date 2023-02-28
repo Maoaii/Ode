@@ -639,6 +639,10 @@ video {
   vertical-align: middle;
 }
 
+.font-Shantell {
+  font-family: Shantell\ Sans, cursive;
+}
+
 .text-custom-bege {
   --tw-text-opacity: 1;
   color: rgb(247 239 229 / var(--tw-text-opacity));
@@ -672,7 +676,10 @@ video {
 }
 
 .title-box {
-  height: 2.5rem;
+  display: flex;
+  height: 4rem;
+  align-items: center;
+  justify-content: center;
   border-radius: 9999px;
   border-bottom-width: 2px;
   --tw-border-opacity: 1;

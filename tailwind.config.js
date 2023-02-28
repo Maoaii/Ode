@@ -14,7 +14,7 @@ module.exports = {
       }
     },
     fontFamily: {
-      
+      Shantell: ["Shantell\\ Sans, cursive"]
     }
   },
   plugins: [],
