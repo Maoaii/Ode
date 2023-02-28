@@ -10,6 +10,7 @@ module.exports = {
         "custom-purple": "#674188",
         "custom-pink": "#EAC7C7",
         "custom-light-blue": "#A0C3D2",
+        "custom-dark-blue": "#61757D",
         "font-color": "#3A244D",
       }
     },

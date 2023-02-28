@@ -2,14 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-.btn {
-    @apply hover:text-custom-light-purple;
-}
+@layer components {
+    .btn {
+        @apply hover:text-custom-light-purple;
+    }
 
-.line-break {
-    @apply w-1/4 rounded-full shadow-md border-4 border-custom-purple;
-}
+    .line-break {
+        @apply w-1/4 rounded-full shadow-md border-4 border-custom-purple;
+    }
 
-.title-box {
-    @apply h-16 text-2xl flex justify-center items-center bg-custom-light-purple rounded-full shadow-md border-b-2 border-custom-purple;
+    .title-box {
+        @apply p-4 h-16 text-2xl flex justify-center items-center bg-custom-light-purple rounded-full shadow-md border-b-4 border-custom-purple;
+    }
 }
