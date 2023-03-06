@@ -9,34 +9,39 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@500&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
     <link rel="stylesheet" href="/public/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="src/script.js" defer></script>
     <title>Ode</title>
 </head>
 <body class="bg-bg-color text-font-color text-center font-Shantell">
+    <button id="top-button" class="fixed hidden z-50 bottom-5 right-7 rounded-full bg-custom-purple-faded h-[60px]" 
+    onclick="backToTop()" title="Go to top"><span class="material-symbols-rounded text-6xl">expand_less</span></button>
+
+    <header class="min-h-screen w-screen bg-cover" style="background-image: url(img/elementor-placeholder-image.webp);">
+        <nav class="sticky top-5 max-w-[160px] mx-auto px-3 bg-custom-light-purple rounded-full shadow-md
+        border-b-2 border-custom-purple flex flex-row flex-wrap gap-1 place-content-between">
+    
+            <a href="#home">Home</a>
+    
+            <div id="menu" class="hidden">
+                <a href="#">Introdução</a>
+                <a href="#">Sobre ti...</a>
+                <a href="#">Nossa história</a>
+                <a href="#">Motivação</a>
+                <a href="#">Entretenimento</a>
+            </div>
+    
+            <a class="active:text-custom-bege" href="javascript:void(0);" onclick="showDropdown()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+
+    <br>
+
     <main class="flex flex-col items-center gap-20">
-        <section class="min-h-screen w-screen bg-cover" style="background-image: url(img/elementor-placeholder-image.webp);">
-            <nav class="sticky top-5 max-w-[160px] mx-auto px-3 bg-custom-light-purple rounded-full shadow-md
-            border-b-2 border-custom-purple flex flex-row flex-wrap gap-1 place-content-between">
-
-                <a href="#home">Home</a>
-
-                <div id="menu" class="hidden">
-                    <a href="#">Introdução</a>
-                    <a href="#">Sobre ti...</a>
-                    <a href="#">Nossa história</a>
-                    <a href="#">Motivação</a>
-                    <a href="#">Entretenimento</a>
-                </div>
-
-                <a class="active:text-custom-bege" href="javascript:void(0);" onclick="showDropdown()">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </nav>
-        </section>
-
-
         <section class="w-4/5 flex flex-col gap-12">
             <div class="title-box ">
                 <h1>Breve Introdução</h1>
