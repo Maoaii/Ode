@@ -18,4 +18,8 @@
     .history-box {
         @apply bg-custom-light-blue p-5 rounded-lg shadow-md border-b-4 border-custom-dark-blue;
     }
+
+    .date-circle {
+        @apply bg-custom-light-blue p-2 w-16 h-16 rounded-full grow-0 shrink-0 text-xs flex items-center;
+    }
 }
