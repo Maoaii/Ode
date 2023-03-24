@@ -800,6 +800,30 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+:root {
+  cursor: url(/img/cursor/icon_medium.png) -32 -32, auto;
+}
+
+a:hover, button:hover {
+  cursor: url(/img/cursor/icon_hover.png) -32 -32, auto;
+}
+
+a:active, button:active {
+  cursor: url(icon_click2.png), auto;
+  animation-name: shoot;
+  animation-duration: 0.5s;
+}
+
+@keyframes shoot {
+  from {
+    cursor: url(/img/cursor/icon_click.png) 10 10, auto;
+  }
+
+  to {
+    cursor: url(/img/cursor/icon_click2.png), auto;
+  }
+}
+
 .active\:translate-y-1:active {
   --tw-translate-y: 0.25rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));

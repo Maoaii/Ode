@@ -1,4 +1,5 @@
 const topButton = document.getElementById("top-button");
+const dropdown = document.getElementById("dropdown");
 const messagesContainer = document.getElementById("messages-container");
 const newMessageButton = document.getElementById("new-message-button");
 const historyContainer = document.getElementById("history-container");
@@ -20,14 +21,9 @@ window.onscroll = function() {
   scrollFunction()
 };
 
+topButton.addEventListener("click", backToTop);
+dropdown.addEventListener("click", showDropdown);
 newMessageButton.addEventListener("click", displayNewMessage);
-
-
-function displayNewMessage() {
-  const newMessage = messages[Math.floor(Math.random() * messages.length)];
-
-  messagesContainer.textContent = newMessage;
-}
 
 function showDropdown() {
     var x = document.getElementById("menu");
@@ -44,11 +40,6 @@ function scrollFunction() {
   } else {
     topButton.style.display = "none";
   }
-}
-
-function backToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
 }
 
 function addHistoryElement(month, year, imagePath, descriptionText) {
@@ -77,4 +68,15 @@ function addHistoryElement(month, year, imagePath, descriptionText) {
   container.appendChild(historyBox);
 
   historyContainer.appendChild(container);
+}
+
+function displayNewMessage() {
+  const newMessage = messages[Math.floor(Math.random() * messages.length)];
+
+  messagesContainer.textContent = newMessage;
+}
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }

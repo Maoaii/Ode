@@ -5,19 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@500&display=swap" rel="stylesheet">
 
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
     <link rel="stylesheet" href="/public/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="src/script.js" defer></script>
+    
+    <!-- Title -->
     <title>Ode</title>
 </head>
-<body class="bg-bg-color text-font-color text-center font-Shantell">
+<body class="bg-bg-color text-font-color text-center font-Shantell cursor-baseline">
     <button id="top-button" class="fixed hidden z-50 bottom-5 right-7 rounded-full bg-custom-purple-faded h-[60px]" 
-    onclick="backToTop()" title="Go to top"><span class="material-symbols-rounded text-6xl">expand_less</span></button>
+    title="Go to top"><span class="material-symbols-rounded text-6xl">expand_less</span></button>
 
     <header class="min-h-screen w-screen bg-cover" style="background-image: url(img/elementor-placeholder-image.webp);">
         <nav class="sticky top-5 max-w-[160px] mx-auto px-3 bg-custom-light-purple rounded-full shadow-md
@@ -33,7 +36,7 @@
                 <a href="#">Entretenimento</a>
             </div>
     
-            <a class="active:text-custom-bege" href="javascript:void(0);" onclick="showDropdown()">
+            <a id="dropdown" class="active:text-custom-bege" href="javascript:void(0);">
                 <i class="fa fa-bars"></i>
             </a>
         </nav>
@@ -87,6 +90,7 @@
                 <div class="title-box bg-custom-light-blue border-custom-dark-blue">
                     <h1>A nossa História</h1>
                 </div>
+
             </section>
         </div>
         
@@ -123,5 +127,7 @@
     flex flex-wrap align-middle place-content-center">
         <p>Website made by <a class="btn underline" href="https://github.com/Maoaii">Lucas Girotto</a></p>
     </footer>
+
+    <script src="src/script.js"></script>
 </body>
 </html>

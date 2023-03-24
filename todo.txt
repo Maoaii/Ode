@@ -1,0 +1,4 @@
+- Fix dropdown
+- Add hearts bubling up animation when page loaded - https://medium.com/front-end-weekly/how-to-fill-your-website-with-lovely-valentines-hearts-d30fe66d58eb
+- Add heart loading screen (heart pumps and background color changes) - https://codepen.io/bbosmedia/pen/pZOqqP
+- Create memory game - https://www.webtips.dev/memory-game-in-javascript
