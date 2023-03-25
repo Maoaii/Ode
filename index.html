@@ -15,6 +15,10 @@
     <link rel="stylesheet" href="/public/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
+    <link rel="icon" type="image/x-icon" href="img/favicon_io/favicon-16x16.png">
+    <script src="src/script.js" defer></script>    
+    <script src="/src/jquery.js"></script>
+
     <!-- Title -->
     <title>Ode</title>
 </head>
@@ -22,7 +26,7 @@
     <button id="top-button" class="fixed hidden z-50 bottom-5 right-7 rounded-full bg-custom-purple-faded h-[60px]" 
     title="Go to top"><span class="material-symbols-rounded text-6xl">expand_less</span></button>
 
-    <header class="min-h-screen w-screen bg-cover" style="background-image: url(img/elementor-placeholder-image.webp);">
+    <header class="hidden min-h-screen w-screen bg-cover" style="background-image: url(img/elementor-placeholder-image.webp);">
         <nav class="sticky top-5 max-w-[160px] mx-auto px-3 bg-custom-light-purple rounded-full shadow-md
         border-b-2 border-custom-purple flex flex-row flex-wrap gap-1 place-content-between">
     
@@ -44,7 +48,7 @@
 
     <br>
 
-    <main class="flex flex-col items-center gap-20">
+    <main class="hidden flex flex-col items-center gap-20">
         <section class="w-4/5 flex flex-col gap-12">
             <div class="title-box ">
                 <h1>Breve Introdução</h1>
@@ -123,11 +127,12 @@
 
     </main>
 
-    <footer class="h-12 bg-custom-purple text-center text-custom-bege 
+    <footer class="hidden h-12 bg-custom-purple text-center text-custom-bege 
     flex flex-wrap align-middle place-content-center">
         <p>Website made by <a class="btn underline" href="https://github.com/Maoaii">Lucas Girotto</a></p>
     </footer>
-
-    <script src="src/script.js"></script>
+    
+    <div id="back" class="back"></div>
+    <div id="heart" class="heart h-screen flex justify-center items-center"></div>
 </body>
 </html>

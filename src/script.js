@@ -9,7 +9,15 @@ let historyElements = [
   {month: "Jan", year:"2020", imagePath:"img/elementor-placeholder-image.webp", description:"Hallo!"},
   {month: "Jan", year:"2020", imagePath:"img/elementor-placeholder-image.webp", description:"Hallo!"},
 ]
-
+$(window).on("load", function()  {
+  setTimeout(function() {
+    $(".heart").fadeOut();
+    $(".back").fadeOut();
+    document.querySelector("header").classList.remove("hidden");
+    document.querySelector("main").classList.remove("hidden");
+    document.querySelector("footer").classList.remove("hidden");
+  }, 1000)
+});
 // Populate history elements
 historyElements.forEach(historyElement => {
   addHistoryElement(historyElement.month, historyElement.year, historyElement.imagePath, historyElement.description);
@@ -24,6 +32,11 @@ window.onscroll = function() {
 topButton.addEventListener("click", backToTop);
 dropdown.addEventListener("click", showDropdown);
 newMessageButton.addEventListener("click", displayNewMessage);
+
+
+window.onload(() => {
+
+});
 
 function showDropdown() {
     var x = document.getElementById("menu");
