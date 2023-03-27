@@ -1,3 +1,4 @@
+const nav = document.getElementById("navbar");
 const topButton = document.getElementById("top-button");
 const dropdown = document.getElementById("dropdown");
 const messagesContainer = document.getElementById("messages-container");
@@ -36,17 +37,9 @@ window.onscroll = function() {
 };
 
 topButton.addEventListener("click", () => window.scrollTo({top: 0, behavior: "smooth"}));
-dropdown.addEventListener("click", showDropdown);
+dropdown.addEventListener("click", () => document.getElementById("menu").classList.toggle("hidden"));
 newMessageButton.addEventListener("click", displayNewMessage);
 
-function showDropdown() {
-    var x = document.getElementById("menu");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
 
 function addHistoryElement(month, year, imagePath, descriptionText) {
   const container = document.createElement("div");

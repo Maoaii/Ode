@@ -610,6 +610,10 @@ video {
   line-height: 1rem;
 }
 
+.expanded {
+  border-radius: 0.375rem;
+}
+
 .visible {
   visibility: visible;
 }
@@ -648,6 +652,10 @@ video {
 
 .top-5 {
   top: 1.25rem;
+}
+
+.right-full {
+  right: 100%;
 }
 
 .z-50 {
@@ -809,6 +817,10 @@ video {
 
 .gap-4 {
   gap: 1rem;
+}
+
+.self-end {
+  align-self: flex-end;
 }
 
 .truncate {

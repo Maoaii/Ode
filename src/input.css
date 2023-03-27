@@ -112,4 +112,8 @@ a:active, button:active {
     .date-circle {
         @apply bg-custom-light-blue p-2 w-16 h-16 rounded-full grow-0 shrink-0 text-xs flex items-center;
     }
+
+    .expanded {
+      @apply rounded-md;
+    }
 }
