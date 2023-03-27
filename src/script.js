@@ -18,6 +18,7 @@ $(window).on("load", function()  {
     document.querySelector("footer").classList.remove("hidden");
   }, 1000)
 });
+
 // Populate history elements
 historyElements.forEach(historyElement => {
   addHistoryElement(historyElement.month, historyElement.year, historyElement.imagePath, historyElement.description);
@@ -26,17 +27,17 @@ historyElements.forEach(historyElement => {
 // Event listeners for scrolling.
 // Make the "go to top" button appear when scrolling down.
 window.onscroll = function() {
-  scrollFunction()
+  if (document.body.scrolLTop > window.innerHeight || 
+      document.documentElement.scrollTop > window.innerHeight) {
+    topButton.style.display = "block";
+  } else {
+    topButton.style.display = "none";
+  }
 };
 
-topButton.addEventListener("click", backToTop);
+topButton.addEventListener("click", () => window.scrollTo({top: 0, behavior: "smooth"}));
 dropdown.addEventListener("click", showDropdown);
 newMessageButton.addEventListener("click", displayNewMessage);
-
-
-window.onload(() => {
-
-});
 
 function showDropdown() {
     var x = document.getElementById("menu");
@@ -44,14 +45,6 @@ function showDropdown() {
     x.style.display = "none";
   } else {
     x.style.display = "block";
-  }
-}
-
-function scrollFunction() {
-  if (document.body.scrolLTop > window.innerHeight || document.documentElement.scrollTop > window.innerHeight) {
-    topButton.style.display = "block";
-  } else {
-    topButton.style.display = "none";
   }
 }
 
@@ -87,9 +80,4 @@ function displayNewMessage() {
   const newMessage = messages[Math.floor(Math.random() * messages.length)];
 
   messagesContainer.textContent = newMessage;
-}
-
-function backToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
 }
