@@ -654,10 +654,6 @@ video {
   top: 1.25rem;
 }
 
-.right-full {
-  right: 100%;
-}
-
 .z-50 {
   z-index: 50;
 }
@@ -817,10 +813,6 @@ video {
 
 .gap-4 {
   gap: 1rem;
-}
-
-.self-end {
-  align-self: flex-end;
 }
 
 .truncate {
@@ -1005,7 +997,7 @@ a:hover, button:hover {
   cursor: url(/img/cursor/icon_hover.png) -32 -32, auto;
 }
 
-a:active, button:active {
+*:active {
   cursor: url(icon_click2.png), auto;
   animation-name: shoot;
   animation-duration: 0.5s;
