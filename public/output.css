@@ -676,14 +676,6 @@ input, textarea {
   top: 1.25rem;
 }
 
-.top-1 {
-  top: 0.25rem;
-}
-
-.top-2 {
-  top: 0.5rem;
-}
-
 .z-50 {
   z-index: 50;
 }
@@ -707,18 +699,6 @@ input, textarea {
 
 .mt-4 {
   margin-top: 1rem;
-}
-
-.mr-2 {
-  margin-right: 0.5rem;
-}
-
-.mb-\[-4px\] {
-  margin-bottom: -4px;
-}
-
-.mr-1 {
-  margin-right: 0.25rem;
 }
 
 .block {
@@ -879,12 +859,12 @@ input, textarea {
   border-radius: 9999px;
 }
 
-.rounded-xl {
-  border-radius: 0.75rem;
-}
-
 .rounded-md {
   border-radius: 0.375rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 
 .border {
@@ -936,11 +916,6 @@ input, textarea {
 
 .bg-custom-purple-faded {
   background-color: rgb(103, 65, 136, 0.2);
-}
-
-.bg-custom-dark-blue {
-  --tw-bg-opacity: 1;
-  background-color: rgb(97 117 125 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -1068,6 +1043,10 @@ a:active, button:active {
   to {
     cursor: url(/img/cursor/icon_click2.png), auto;
   }
+}
+
+.delete-button {
+  margin-left: calc(100% - 1.25rem);
 }
 
 .back {

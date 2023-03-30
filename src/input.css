@@ -26,6 +26,9 @@ a:active, button:active {
     }
 }
 
+.delete-button {
+  margin-left: calc(100% - 1.25rem);
+}
 
 .back {
   position: fixed;

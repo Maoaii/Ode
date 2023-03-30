@@ -139,6 +139,7 @@ function addHistoryElement(month, year, imagePath, descriptionText, index, isPas
   if (!isPast) {
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "X";
+    deleteButton.classList.add("delete-button", "text-xl");
     deleteButton.addEventListener("click", deleteHistory);
     historyBox.appendChild(deleteButton);
   }
