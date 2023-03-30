@@ -4,6 +4,7 @@ const messagesContainer = document.getElementById("messages-container");
 const newMessageButton = document.getElementById("new-message-button");
 const historyContainer = document.getElementById("history-container");
 const historyForm = document.getElementById("history-form");
+const historyImageInput = document.getElementById("image-input");
 
 
 let messages = ["Hello", "How are you?", "I'm fine", "Goodbye"];
@@ -16,6 +17,17 @@ topButton.addEventListener("click", () => window.scrollTo({top: 0, behavior: "sm
 dropdown.addEventListener("click", showDropdown);
 newMessageButton.addEventListener("click", displayNewMessage);
 historyForm.addEventListener("submit", submitHistoryEvent);
+historyImageInput.addEventListener("change", (event) => {
+  const image = historyImageInput.files[0];
+  const imageName = document.getElementById("image-name");
+  imageName.textContent = event.target.files[0].name;
+  
+  const reader = new FileReader();
+  reader.readAsDataURL(image);
+  reader.addEventListener('load', () => {
+    saveData("image", reader.result);
+  });
+})
 
 
 // Event listeners for scrolling.
@@ -76,13 +88,7 @@ function submitHistoryEvent(event) {
 
   const date = document.getElementById("date-input").value.split("-"); 
   const description = document.getElementById("description-input").value; 
-  const image = document.getElementById("image-input").files[0];
-
-  const reader = new FileReader();
-  reader.readAsDataURL(image);
-  reader.addEventListener('load', () => {
-    saveData("image", reader.result);
-  });
+  
 
   const element = {
     month: date[1],
@@ -144,10 +150,7 @@ function addHistoryElement(month, year, imagePath, descriptionText, index, isPas
   container.appendChild(dateContainer);
   container.appendChild(historyBox);
 
-  
-  historyContainer.appendChild(container);
-
-  
+  historyContainer.insertBefore(container, historyForm); 
 }
 
 function deleteHistory(event) {
