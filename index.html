@@ -95,22 +95,29 @@
                     <h1>A nossa História</h1>
                 </div>
 
+                <form id="history-form" action="#" class="flex flex-col gap-6">
+                    <h1>Futuro...</h1>
 
-                <form id="history-form" action="#">
+                    <label for="date-input">
+                        <h2>Data</h2>
 
-                    <div class="flex items-center gap-4">
-                        <div class="date-circle">
-                            <input id="date-input" type="date">
-                        </div>
-                        <div class="history-box">
-                            <input id="image-input" type="file">
-                            <input id="description-input" type="text" placeholder="Descrição...">
-                        </div>
-                        
-                        <button type="submit">Molda a nossa história!</button>
-                    </div>
+                        <input id="date-input" type="date">
+                    </label>
+
+                    <label for="image-input">
+                        <h2>Imagem</h2>
+
+                        <input id="image-input" type="file" class="hidden">
+                    </label>
+
+                    <label for="description-input">
+                        <h2>Descrição</h2>
+
+                        <input id="description-input" type="text">
+                    </label>
+
+                    <button type="submit">Molda a nossa história!</button>
                 </form>
-
                 
             </section>
         </div>

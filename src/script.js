@@ -7,7 +7,9 @@ const historyForm = document.getElementById("history-form");
 
 
 let messages = ["Hello", "How are you?", "I'm fine", "Goodbye"];
+const pastHistoryElements = [];
 let historyElements = [];
+let currentIndex = 0;
 
 
 topButton.addEventListener("click", () => window.scrollTo({top: 0, behavior: "smooth"}));
@@ -29,7 +31,8 @@ window.onscroll = function() {
 
 $(window).on("load", function()  {
   setTimeout(showWebsite, 1000);
-  getHistoryElements()
+  getHistoryElements();
+  getCurrentIndex();
 });
 
 
@@ -41,6 +44,12 @@ function showWebsite() {
   document.querySelector("footer").classList.remove("hidden");
 }
 
+// Past history elements that won't be available for change
+pastHistoryElements.forEach(() => {
+  addHistoryElement(historyElement.month, historyElement.year, 
+                    historyElement.imagePath, historyElement.description, historyElement.historyIndex, isPast=true);
+});
+
 function getHistoryElements() {
   const tmpHistoryElements = retrieveData("historyElements");
   
@@ -49,8 +58,16 @@ function getHistoryElements() {
     historyElements = tmpHistoryElements;
 
     historyElements.forEach(historyElement => {
-      addHistoryElement(historyElement.month, historyElement.year, historyElement.imagePath, historyElement.description);
+      addHistoryElement(historyElement.month, historyElement.year, historyElement.imagePath, historyElement.description, historyElement.historyIndex, isPast=false);
     });
+  }
+}
+
+function getCurrentIndex() {
+  const tmpIndex = retrieveData("historyIndex");
+
+  if (tmpIndex) {
+    currentIndex = tmpIndex;
   }
 }
 
@@ -59,11 +76,10 @@ function submitHistoryEvent(event) {
 
   const date = document.getElementById("date-input").value.split("-"); 
   const description = document.getElementById("description-input").value; 
-  
   const image = document.getElementById("image-input").files[0];
+
   const reader = new FileReader();
   reader.readAsDataURL(image);
-
   reader.addEventListener('load', () => {
     saveData("image", reader.result);
   });
@@ -72,13 +88,15 @@ function submitHistoryEvent(event) {
     month: date[1],
     year: date[0],
     imagePath: retrieveData("image"),
-    description: description
+    description: description,
+    historyIndex: currentIndex++
   };
   
   historyElements.push(element);
-  saveData("historyElements", historyElements);
+  addHistoryElement(element.month, element.year, element.imagePath, element.description, element.historyIndex);
 
-  getHistoryElements();
+  saveData("historyElements", historyElements);
+  saveData("historyIndex", currentIndex);
 }
 
 function showDropdown() {
@@ -90,23 +108,34 @@ function showDropdown() {
   }
 }
 
-function addHistoryElement(month, year, imagePath, descriptionText) {
+function addHistoryElement(month, year, imagePath, descriptionText, index, isPast) {
   const container = document.createElement("div");
   const dateContainer = document.createElement("div");
   const date = document.createElement("p");
   const historyBox = document.createElement("div");
+  
   const image = document.createElement("img");
   const description = document.createElement("p");
 
   container.classList.add("flex", "items-center", "gap-4");
+  container.setAttribute("data-historyIndex", index)
   dateContainer.classList.add("date-circle");
   historyBox.classList.add("history-box");
   description.classList.add("mt-4");
+  
 
   date.textContent = month + " - " + year;
   description.textContent = descriptionText;
+  
 
   image.setAttribute("src", imagePath);
+
+  if (!isPast) {
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "X";
+    deleteButton.addEventListener("click", deleteHistory);
+    historyBox.appendChild(deleteButton);
+  }
 
   dateContainer.appendChild(date);
   historyBox.appendChild(image);
@@ -115,7 +144,23 @@ function addHistoryElement(month, year, imagePath, descriptionText) {
   container.appendChild(dateContainer);
   container.appendChild(historyBox);
 
+  
   historyContainer.appendChild(container);
+
+  
+}
+
+function deleteHistory(event) {
+  const historyElement = event.target.parentElement.parentElement;
+  // Update changes to visual history boxes (remove the history box)
+  historyElement.remove();
+
+  // Remove history from local variable
+  const history = historyElements.find((element) => element.historyIndex == historyElement.getAttribute("historyIndex"));
+  historyElements.splice(historyElements.indexOf(history), 1);
+
+  // Update changes to local storage
+  saveData("historyElements", historyElements);
 }
 
 function displayNewMessage() {
