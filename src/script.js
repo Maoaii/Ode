@@ -87,19 +87,22 @@ function getCurrentIndex() {
 function submitHistoryEvent(event) {
   event.preventDefault();
 
-  const date = document.getElementById("date-input").value.split("-"); 
-  const description = document.getElementById("description-input").value; 
+  const dateInput = document.getElementById("date-input");
+  const descriptionInput = document.getElementById("description-input");
+  const imageInput = document.getElementById("image-input-container");
 
-  if (!validInput(date, description, retrieveData("image"))) {
-    // Make something
+  const date = dateInput.value.split("-"); 
+  const description = descriptionInput.value;
+  const image = retrieveData("image");
 
+  if (!isValidInput(date, description, image, dateInput, descriptionInput, imageInput)) {
     return;
   }
   
   const element = {
     month: date[1],
     year: date[0],
-    imagePath: retrieveData("image"),
+    imagePath: image,
     description: description,
     historyIndex: currentIndex++
   };
@@ -112,12 +115,16 @@ function submitHistoryEvent(event) {
   cleanInputs();
 }
 
-function validInput(date, description, image) {
-  if (date.length != 3 || description.trim() === "" || image === null) {
-    return false;
-  }
+function isValidInput(date, description, image, dateInput, descriptionInput, imageInput) {
+  const isDateValid = date.length === 3;
+  const isDescriptionValid = description !== "";
+  const isImageValid = image !== null;
 
-  return true;
+  isDateValid ? dateInput.classList.remove("invalid") : dateInput.classList.add("invalid");
+  isDescriptionValid ? descriptionInput.classList.remove("invalid") : descriptionInput.classList.add("invalid");
+  isImageValid ? imageInput.classList.remove("invalid") : imageInput.classList.add("invalid");
+
+  return isDateValid && isDescriptionValid && isImageValid;
 }
 
 function cleanInputs() {

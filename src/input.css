@@ -101,6 +101,10 @@ a:active, button:active {
       @apply p-1 rounded-md;
     }
 
+    .invalid {
+      @apply border-2 border-red-500;
+    }
+
     .history-h2 {
         @apply text-lg text-center;
     }
