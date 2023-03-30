@@ -3,7 +3,9 @@
 - Ask for motivational quotes
 - Make desktop reponsive
 - Fix dropdown
-- Change add history aesthetic
+- Add validation to form
+- Clean input after succesfull submit
+- Fix delete button positioning
 
 CREDITS
 - Add heart loading screen (heart pumps and background color changes) - https://codepen.io/bbosmedia/pen/pZOqqP
