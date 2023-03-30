@@ -7,10 +7,10 @@ const historyForm = document.getElementById("history-form");
 const historyImageInput = document.getElementById("image-input");
 
 
-let messages = ["Hello", "How are you?", "I'm fine", "Goodbye"];
 const pastHistoryElements = [];
 let historyElements = [];
 let currentIndex = 0;
+let messages = ["Hello", "How are you?", "I'm fine", "Goodbye"];
 
 
 topButton.addEventListener("click", () => window.scrollTo({top: 0, behavior: "smooth"}));
@@ -103,6 +103,18 @@ function submitHistoryEvent(event) {
 
   saveData("historyElements", historyElements);
   saveData("historyIndex", currentIndex);
+  cleanInputs();
+}
+
+function cleanInputs() {
+  const imageInput = historyImageInput;
+  const dateInput = document.getElementById("date-input");
+  const textInput = document.getElementById("description-input");
+  
+  [imageInput, dateInput, textInput].forEach((inputElement) => {
+    inputElement.value = null;
+  });
+  document.getElementById("image-name").textContent = "";
 }
 
 function showDropdown() {
