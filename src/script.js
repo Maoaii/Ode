@@ -45,6 +45,7 @@ $(window).on("load", function()  {
   setTimeout(showWebsite, 1000);
   getHistoryElements();
   getCurrentIndex();
+  saveData("image", null);
 });
 
 
@@ -88,8 +89,13 @@ function submitHistoryEvent(event) {
 
   const date = document.getElementById("date-input").value.split("-"); 
   const description = document.getElementById("description-input").value; 
-  
 
+  if (!validInput(date, description, retrieveData("image"))) {
+    // Make something
+
+    return;
+  }
+  
   const element = {
     month: date[1],
     year: date[0],
@@ -106,6 +112,14 @@ function submitHistoryEvent(event) {
   cleanInputs();
 }
 
+function validInput(date, description, image) {
+  if (date.length != 3 || description.trim() === "" || image === null) {
+    return false;
+  }
+
+  return true;
+}
+
 function cleanInputs() {
   const imageInput = historyImageInput;
   const dateInput = document.getElementById("date-input");
@@ -115,6 +129,7 @@ function cleanInputs() {
     inputElement.value = null;
   });
   document.getElementById("image-name").textContent = "";
+  saveData("image", null);
 }
 
 function showDropdown() {

@@ -5,7 +5,6 @@
 - Fix dropdown
 - Add "are you sure" to delete button
 - Add validation to form
-- Clean input after succesfull submit
 
 CREDITS
 - Add heart loading screen (heart pumps and background color changes) - https://codepen.io/bbosmedia/pen/pZOqqP
