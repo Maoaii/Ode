@@ -98,8 +98,13 @@ a:hover, button:hover {
 @layer components {
 
     h1 {
-      @apply lg:text-5xl md:text-4xl text-xl font-bold text-center;
+      @apply lg:text-5xl md:text-4xl text-xl font-bold ;
     }
+
+    h2 {
+      @apply font-bold;
+    }
+
     input, textarea {
       @apply p-1 rounded-md;
     }

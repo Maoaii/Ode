@@ -548,7 +548,6 @@ video {
 }
 
 h1 {
-  text-align: center;
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 700;
@@ -566,6 +565,10 @@ h1 {
     font-size: 3rem;
     line-height: 1;
   }
+}
+
+h2 {
+  font-weight: 700;
 }
 
 input, textarea {
@@ -807,10 +810,6 @@ input, textarea {
   display: none;
 }
 
-.h-10 {
-  height: 2.5rem;
-}
-
 .h-12 {
   height: 3rem;
 }
@@ -845,10 +844,6 @@ input, textarea {
 
 .w-1\/2 {
   width: 50%;
-}
-
-.w-3\/5 {
-  width: 60%;
 }
 
 .w-4\/5 {
@@ -1232,10 +1227,6 @@ a:hover, button:hover {
 @media (min-width: 1024px) {
   .lg\:w-3\/4 {
     width: 75%;
-  }
-
-  .lg\:w-3\/5 {
-    width: 60%;
   }
 
   .lg\:w-4\/5 {
