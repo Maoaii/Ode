@@ -1,6 +1,7 @@
 - Add motivational quotes
 - Start adding images
 - Ask for motivational quotes
+- add day to date circle
 - Make desktop reponsive
 
 CREDITS
