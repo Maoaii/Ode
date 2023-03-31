@@ -7,7 +7,9 @@ const historyForm = document.getElementById("history-form");
 const historyImageInput = document.getElementById("image-input");
 
 
-const pastHistoryElements = [];
+const pastHistoryElements = [
+  {month: "04", year: "2019", imagePath: "img/elementor-placeholder-image.webp", description: "hello", historyIndex: 0, isPast: true}
+];
 let historyElements = [];
 let currentIndex = 0;
 let messages = ["Hello", "How are you?", "I'm fine", "Goodbye"];
@@ -17,18 +19,7 @@ topButton.addEventListener("click", () => window.scrollTo({top: 0, behavior: "sm
 dropdown.addEventListener("click", showDropdown);
 newMessageButton.addEventListener("click", displayNewMessage);
 historyForm.addEventListener("submit", submitHistoryEvent);
-historyImageInput.addEventListener("change", (event) => {
-  const image = historyImageInput.files[0];
-  const imageName = document.getElementById("image-name");
-  imageName.textContent = event.target.files[0].name;
-  
-  const reader = new FileReader();
-  reader.readAsDataURL(image);
-  reader.addEventListener('load', () => {
-    saveData("image", reader.result);
-  });
-})
-
+historyImageInput.addEventListener("change", updateImageSaved);
 
 // Event listeners for scrolling.
 // Make the "go to top" button appear when scrolling down.
@@ -58,7 +49,7 @@ function showWebsite() {
 }
 
 // Past history elements that won't be available for change
-pastHistoryElements.forEach(() => {
+pastHistoryElements.forEach((historyElement) => {
   addHistoryElement(historyElement.month, historyElement.year, 
                     historyElement.imagePath, historyElement.description, historyElement.historyIndex, isPast=true);
 });
@@ -82,6 +73,18 @@ function getCurrentIndex() {
   if (tmpIndex) {
     currentIndex = tmpIndex;
   }
+}
+
+function updateImageSaved() {
+  const image = historyImageInput.files[0];
+  const imageName = document.getElementById("image-name");
+  imageName.textContent = event.target.files[0].name;
+  
+  const reader = new FileReader();
+  reader.readAsDataURL(image);
+  reader.addEventListener('load', () => {
+    saveData("image", reader.result);
+  });
 }
 
 function submitHistoryEvent(event) {
@@ -174,7 +177,7 @@ function addHistoryElement(month, year, imagePath, descriptionText, index, isPas
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "X";
     deleteButton.classList.add("delete-button", "text-xl");
-    deleteButton.addEventListener("click", deleteHistory);
+    deleteButton.addEventListener("click", showConfirmation);
     historyBox.appendChild(deleteButton);
   }
 
@@ -187,6 +190,52 @@ function addHistoryElement(month, year, imagePath, descriptionText, index, isPas
 
   historyContainer.insertBefore(container, historyForm); 
 }
+
+function showConfirmation(event) {
+  disableScroll();
+
+  // Open popup for confirmation
+  openConfirmationPopup(event);
+}
+
+function openConfirmationPopup(event) {
+  const popupContainer = document.createElement("div");
+  const popupHeader = document.createElement("h1");
+  const buttonContainer = document.createElement("div");
+  const noButton = document.createElement("button");
+  const yesButton = document.createElement("button");
+  
+  popupContainer.classList.add("fixed", "top-1/3", "left-1/4", "w-1/2", "p-4", "bg-bg-color",
+                                 "border-b-4", "border-custom-bege", "rounded-md", "shadow-md");
+  buttonContainer.classList.add("mt-2", "flex", "gap-2", "place-content-center");
+  noButton.classList.add("border-b-4", "p-2", "dynamic-button", "bg-custom-light-purple",  "border-custom-purple");
+  yesButton.classList.add("border-b-4", "p-2", "dynamic-button", "bg-custom-light-purple",  "border-custom-purple");
+
+  popupHeader.textContent = "Tens a certeza que queres apagar história?";
+  noButton.textContent = "Não";
+  yesButton.textContent = "Sim";
+
+  noButton.addEventListener("click", () => {
+    popupContainer.remove()
+    enableScroll()
+  });
+
+  yesButton.addEventListener("click", () => {
+    deleteHistory(event);
+    popupContainer.remove();
+    enableScroll()
+  });
+
+  buttonContainer.appendChild(noButton);
+  buttonContainer.appendChild(yesButton);
+
+  popupContainer.appendChild(popupHeader);
+  popupContainer.appendChild(buttonContainer);
+  
+  historyContainer.appendChild(popupContainer);
+}
+
+
 
 function deleteHistory(event) {
   const historyElement = event.target.parentElement.parentElement;
@@ -243,4 +292,48 @@ function storageAvailable(type) {
           // acknowledge QuotaExceededError only if there's something already stored
           (storage && storage.length !== 0);
   }
+}
+
+
+
+// left: 37, up: 38, right: 39, down: 40,
+// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+function preventDefault(e) {
+  e.preventDefault();
+}
+
+function preventDefaultForScrollKeys(e) {
+  if (keys[e.keyCode]) {
+    preventDefault(e);
+    return false;
+  }
+}
+
+// modern Chrome requires { passive: false } when adding event
+var supportsPassive = false;
+try {
+  window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+    get: function () { supportsPassive = true; } 
+  }));
+} catch(e) {}
+
+var wheelOpt = supportsPassive ? { passive: false } : false;
+var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+
+// call this to Disable
+function disableScroll() {
+  window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
+  window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+  window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+  window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+}
+
+// call this to Enable
+function enableScroll() {
+  window.removeEventListener('DOMMouseScroll', preventDefault, false);
+  window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
+  window.removeEventListener('touchmove', preventDefault, wheelOpt);
+  window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
 }

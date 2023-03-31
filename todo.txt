@@ -3,7 +3,7 @@
 - Ask for motivational quotes
 - Make desktop reponsive
 - Fix dropdown
-- Add "are you sure" to delete button
 
 CREDITS
 - Add heart loading screen (heart pumps and background color changes) - https://codepen.io/bbosmedia/pen/pZOqqP
+- Disable scrolling - ~https://stackoverflow.com/questions/4770025/how-to-disable-scrolling-temporarily
