@@ -27,18 +27,24 @@
     title="Go to top"><span class="material-symbols-rounded text-6xl">expand_less</span></button>
 
     <header class="hidden min-h-screen w-screen bg-cover" style="background-image: url(img/elementor-placeholder-image.webp);">
-        <nav id="navbar" class="sticky top-5 max-w-[160px] mx-auto px-3 bg-custom-light-purple rounded-md shadow-md
-        border-b-2 border-custom-purple flex flex-row flex-wrap gap-1 place-content-between">
+        <nav id="navbar" class="relative top-5 max-w-[160px] mx-auto px-3 bg-custom-light-purple rounded-md shadow-md
+        border-b-2 border-custom-purple">
+
+            <div class="flex flex-row place-content-between">
+                <a href="#home">Home</a>
+                <a id="dropdown" class="active:text-custom-bege" href="javascript:void(0);">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
     
-            <a href="#home">Home</a>
-            <a id="dropdown" class="active:text-custom-bege" href="javascript:void(0);">
-                <i class="fa fa-bars"></i>
-            </a>
-    
-            <div id="menu" class="hidden">
-                <a href="#introducao">Introdução</a>
+            <div id="menu" class="hidden flex flex-col">
+                <hr class="border-none h-[2px] rounded-md bg-custom-purple">
+                <a href="#introdução">Introdução</a>
+                <hr class="border-none h-px rounded-md bg-custom-purple">
                 <a href="#sobre-ti">Sobre ti...</a>
+                <hr class="border-none h-px rounded-md bg-custom-purple">
                 <a href="#nossa-historia">Nossa história</a>
+                <hr class="border-none h-px rounded-md bg-custom-purple">
                 <a href="#motivacao">Motivação</a>
             </div>
     
