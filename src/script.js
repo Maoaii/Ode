@@ -24,6 +24,16 @@ topButton.addEventListener("click", () => window.scrollTo({top: 0, behavior: "sm
 dropdown.addEventListener("click", () => document.getElementById("menu").classList.toggle("hidden"));
 newMessageButton.addEventListener("click", displayNewMessage);
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});
+
 // Event listeners for scrolling.
 // Make the "go to top" button appear when scrolling down.
 window.onscroll = function() {
