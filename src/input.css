@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
-}
-
 :root {
     cursor: url(/img/cursor/icon_medium.png) -32 -32, auto;
 }
