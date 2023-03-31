@@ -12,6 +12,7 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="/public/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
@@ -96,10 +97,48 @@
 
         <div id="nossa-historia" class="bg-custom-pink w-full py-10">
             <section id="history-container" class="flex flex-col gap-12 w-4/5 mx-auto">
+
                 <div class="title-box bg-custom-light-blue border-custom-dark-blue">
                     <h1>A nossa História</h1>
                 </div>
 
+                <form id="history-form" action="#" class="flex items-center gap-4">
+                    <div class="date-circle">
+                        <p>Futuro...</p>
+                    </div>
+
+                    <div class="history-box flex flex-col gap-6">
+                        <label for="image-input">
+                            <h2 class="history-h2">Imagem*</h2>
+
+                            <div id="image-input-container" class="bg-white rounded-md flex flex-col place-content-center">
+                                <span class="material-symbols-outlined">upload</span>
+                                <p id="image-name" class="text-xs"></p>
+                                    
+                                <input id="image-input" type="file" class="hidden ">
+                            </div>
+                        </label>
+
+                        <label for="date-input">
+                            <h2 class="history-h2">Data*</h2>
+    
+                            <input id="date-input" type="date" class="w-full">
+                        </label>
+    
+    
+                        <label for="description-input">
+                            <h2 class="history-h2">Descrição*</h2>
+                            <textarea name="description-input" id="description-input" class="w-full" cols="18" rows="5"></textarea>
+                        </label>
+    
+                        <button type="submit" 
+                            class="dynamic-button bg-custom-light-purple border-b-4 border-custom-purple">
+
+                            Molda a nossa história!
+                        </button>
+                    </div>
+                </form>
+                
             </section>
         </div>
 
@@ -114,8 +153,7 @@
                 </p>
 
                 <button id="new-message-button" 
-                    class="mt-20 p-2 rounded-md shadow-md border-b-4 border-custom-dark-blue bg-custom-light-blue
-                    active:translate-y-1 active:border-b-0">
+                    class="dynamic-button mt-20 border-custom-dark-blue bg-custom-light-blue">
                     Nova Mensagem
                 </button>
             </div>

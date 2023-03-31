@@ -26,6 +26,9 @@ a:hover, button:hover {
     }
 }
 
+.delete-button {
+  margin-left: calc(100% - 1.25rem);
+}
 
 .back {
   position: fixed;
@@ -93,8 +96,25 @@ a:hover, button:hover {
 }
 
 @layer components {
+
+    input, textarea {
+      @apply p-1 rounded-md;
+    }
+
+    .invalid {
+      @apply border-2 border-red-500;
+    }
+
+    .history-h2 {
+        @apply text-lg text-center;
+    }
+
     .btn {
         @apply hover:text-custom-light-purple;
+    }
+
+    .dynamic-button {
+      @apply p-2 rounded-md shadow-md border-b-4  active:translate-y-1 active:border-b-0;
     }
 
     .line-break {
