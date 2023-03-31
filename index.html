@@ -5,12 +5,164 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/dist/output.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@500&display=swap" rel="stylesheet">
 
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="/public/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="icon" type="image/x-icon" href="img/favicon_io/favicon-16x16.png">
+    <script src="src/script.js" defer></script>    
+    <script src="/src/jquery.js"></script>
+
+    <!-- Title -->
     <title>Ode</title>
 </head>
-<body>
-    <h1 class="text-3xl font-bold underline">Hello!</h1>
-    <h1>Hello!</h1>
+<body class="bg-bg-color text-font-color text-center font-Shantell cursor-baseline">
+    <button id="top-button" class="fixed hidden z-50 bottom-5 right-7 rounded-full bg-custom-purple-faded h-[60px]" 
+    title="Go to top"><span class="material-symbols-rounded text-6xl">expand_less</span></button>
+
+    <header class="hidden min-h-screen w-screen bg-cover" style="background-image: url(img/elementor-placeholder-image.webp);">
+        <nav class="sticky top-5 max-w-[160px] mx-auto px-3 bg-custom-light-purple rounded-full shadow-md
+        border-b-2 border-custom-purple flex flex-row flex-wrap gap-1 place-content-between">
+    
+            <a href="#home">Home</a>
+    
+            <div id="menu" class="hidden">
+                <a href="#">Introdução</a>
+                <a href="#">Sobre ti...</a>
+                <a href="#">Nossa história</a>
+                <a href="#">Motivação</a>
+                <a href="#">Entretenimento</a>
+            </div>
+    
+            <a id="dropdown" class="active:text-custom-bege" href="javascript:void(0);">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+
+    <br>
+
+    <main class="hidden flex flex-col items-center gap-20">
+        <section class="w-4/5 flex flex-col gap-12">
+            <div class="title-box ">
+                <h1>Breve Introdução</h1>
+            </div>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur. Potenti mollis sed aliquet amet tristique mi. 
+                Nisl augue amet a quam ullamcorper a scelerisque pharetra. 
+            </p>
+        
+            <video controls>
+                <source src="vids/placeholder.mov" type="video/mp4">
+            </video>
+        </section>
+
+        <hr class="line-break">
+
+        <section class="w-4/5 flex flex-col gap-12">
+            <div class="title-box">
+                <h1>Um pouco sobre ti...</h1>
+            </div>
+
+            <div class="flex flex-col items-center gap-12">
+                <div class="title-box w-3/5 h-10 text-xl">
+                    <h2>
+                        Lorem ipsum
+                    </h2>
+                </div>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur. Potenti mollis sed aliquet amet tristique mi. 
+                    Nisl augue amet a quam ullamcorper a scelerisque pharetra. 
+                    Blandit tellus nunc nibh eu arcu nisi dolor sapien. Dolor justo morbi volutpat blandit. 
+                    Feugiat semper at sodales convallis felis molestie pulvinar at. 
+                </p>
+
+                <img class="rounded-xl" src="img/elementor-placeholder-image.webp" alt="">
+            </div>
+        </section>
+
+        <div class="bg-custom-pink w-full py-10">
+            <section id="history-container" class="flex flex-col gap-12 w-4/5 mx-auto">
+
+                <div class="title-box bg-custom-light-blue border-custom-dark-blue">
+                    <h1>A nossa História</h1>
+                </div>
+
+                <form id="history-form" action="#" class="flex items-center gap-4">
+                    <div class="date-circle">
+                        <p>Futuro...</p>
+                    </div>
+
+                    <div class="history-box flex flex-col gap-6">
+                        <label for="image-input">
+                            <h2 class="history-h2">Imagem*</h2>
+
+                            <div id="image-input-container" class="bg-white rounded-md flex flex-col place-content-center">
+                                <span class="material-symbols-outlined">upload</span>
+                                <p id="image-name" class="text-xs"></p>
+                                    
+                                <input id="image-input" type="file" class="hidden ">
+                            </div>
+                        </label>
+
+                        <label for="date-input">
+                            <h2 class="history-h2">Data*</h2>
+    
+                            <input id="date-input" type="date" class="w-full">
+                        </label>
+    
+    
+                        <label for="description-input">
+                            <h2 class="history-h2">Descrição*</h2>
+                            <textarea name="description-input" id="description-input" class="w-full" cols="18" rows="5"></textarea>
+                        </label>
+    
+                        <button type="submit" 
+                            class="dynamic-button bg-custom-light-purple border-b-4 border-custom-purple">
+
+                            Molda a nossa história!
+                        </button>
+                    </div>
+                </form>
+                
+            </section>
+        </div>
+
+        <section class="flex flex-col w-4/5 mx-auto mb-20 h-80">
+            <div class="title-box">
+                <h1>Quando precisares de motivação</h1>
+            </div>
+
+            <div class="mt-10">
+                <p id="messages-container" class="break-words h-6">
+                    asdsadsaasdsadsaasdsadsaasdsadsaasdsadsaasdsadsaasdsadsaasdsadsaasdsadsa
+                </p>
+
+                <button id="new-message-button" 
+                    class="dynamic-button mt-20 border-custom-dark-blue bg-custom-light-blue">
+                    Nova Mensagem
+                </button>
+            </div>
+
+        </section class="flex flex-col w-4/5 min-h-screen mx-auto">
+
+    </main>
+
+    <footer class="hidden h-12 bg-custom-purple text-center text-custom-bege 
+    flex flex-wrap align-middle place-content-center">
+        <p>Website made by <a class="btn underline" href="https://github.com/Maoaii">Lucas Girotto</a></p>
+    </footer>
+    
+    <div id="back" class="back"></div>
+    <div id="heart" class="heart h-screen flex justify-center items-center"></div>
 </body>
 </html>
