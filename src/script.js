@@ -1,3 +1,4 @@
+const nav = document.getElementById("navbar");
 const topButton = document.getElementById("top-button");
 const dropdown = document.getElementById("dropdown");
 const messagesContainer = document.getElementById("messages-container");
@@ -31,6 +32,11 @@ window.onscroll = function() {
     topButton.style.display = "none";
   }
 };
+
+
+topButton.addEventListener("click", () => window.scrollTo({top: 0, behavior: "smooth"}));
+dropdown.addEventListener("click", () => document.getElementById("menu").classList.toggle("hidden"));
+newMessageButton.addEventListener("click", displayNewMessage);
 
 $(window).on("load", function()  {
   setTimeout(showWebsite, 1000);
@@ -142,14 +148,7 @@ function cleanInputs() {
   saveData("image", null);
 }
 
-function showDropdown() {
-    var x = document.getElementById("menu");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
+
 
 function addHistoryElement(month, year, imagePath, descriptionText, index, isPast) {
   const container = document.createElement("div");

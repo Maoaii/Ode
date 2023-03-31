@@ -10,7 +10,7 @@ a:hover, button:hover {
     cursor: url(/img/cursor/icon_hover.png) -32 -32, auto;
 }
 
-a:active, button:active {
+*:active {
     cursor: url(icon_click2.png), auto;
     animation-name: shoot;
     animation-duration: 0.5s;
@@ -131,5 +131,9 @@ a:active, button:active {
 
     .date-circle {
         @apply bg-custom-light-blue p-2 w-16 h-16 rounded-full grow-0 shrink-0 text-xs flex items-center;
+    }
+
+    .expanded {
+      @apply rounded-md;
     }
 }
