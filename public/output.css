@@ -791,6 +791,10 @@ input, textarea {
   height: 100vh;
 }
 
+.h-\[80px\] {
+  height: 80px;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -815,8 +819,16 @@ input, textarea {
   width: 100vw;
 }
 
+.w-\[80px\] {
+  width: 80px;
+}
+
 .max-w-\[160px\] {
   max-width: 160px;
+}
+
+.max-w-\[200px\] {
+  max-width: 200px;
 }
 
 .resize {
@@ -1009,6 +1021,16 @@ input, textarea {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
 }
 
 .uppercase {

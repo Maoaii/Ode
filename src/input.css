@@ -96,7 +96,6 @@ a:hover, button:hover {
 }
 
 @layer components {
-
     input, textarea {
       @apply p-1 rounded-md;
     }
