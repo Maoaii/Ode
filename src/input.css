@@ -96,6 +96,10 @@ a:hover, button:hover {
 }
 
 @layer components {
+
+    h1 {
+      @apply lg:text-5xl md:text-4xl text-xl font-bold text-center;
+    }
     input, textarea {
       @apply p-1 rounded-md;
     }
@@ -105,7 +109,7 @@ a:hover, button:hover {
     }
 
     .history-h2 {
-        @apply text-lg text-center;
+        @apply text-lg lg:text-xl text-center;
     }
 
     .btn {
@@ -113,7 +117,7 @@ a:hover, button:hover {
     }
 
     .dynamic-button {
-      @apply p-2 rounded-md shadow-md border-b-4  active:translate-y-1 active:border-b-0;
+      @apply lg:text-xl p-2 rounded-md shadow-md border-b-4  active:translate-y-1 active:border-b-0;
     }
 
     .line-break {
@@ -121,7 +125,7 @@ a:hover, button:hover {
     }
 
     .title-box {
-        @apply p-4 h-16 text-xl flex justify-center items-center bg-custom-light-purple rounded-full shadow-md border-b-4 border-custom-purple;
+        @apply py-4 px-10 mx-auto text-xl flex justify-center items-center bg-custom-light-purple rounded-full shadow-md border-b-4 border-custom-purple;
     }
 
     .history-box {
@@ -129,7 +133,7 @@ a:hover, button:hover {
     }
 
     .date-circle {
-        @apply bg-custom-light-blue p-2 w-16 h-16 rounded-full grow-0 shrink-0 text-xs flex items-center;
+        @apply bg-custom-light-blue p-2 w-16 h-16 lg:w-28 lg:h-28 rounded-full grow-0 shrink-0 text-xs lg:text-xl flex items-center;
     }
 
     .expanded {
