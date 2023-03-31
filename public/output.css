@@ -911,11 +911,11 @@ input, textarea {
 
 .border-none {
   border-style: none;
+}
 
 .border-custom-bege {
   --tw-border-opacity: 1;
   border-color: rgb(247 239 229 / var(--tw-border-opacity));
-
 }
 
 .border-custom-dark-blue {

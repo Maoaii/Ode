@@ -2,8 +2,9 @@
 - Start adding images
 - Ask for motivational quotes
 - Make desktop reponsive
-- Fix dropdown
+- Make button for new messages purple
+- Add slow animation to dropdown clicking on tags
 
 CREDITS
 - Add heart loading screen (heart pumps and background color changes) - https://codepen.io/bbosmedia/pen/pZOqqP
-- Disable scrolling - ~https://stackoverflow.com/questions/4770025/how-to-disable-scrolling-temporarily
+- Disable scrolling - https://stackoverflow.com/questions/4770025/how-to-disable-scrolling-temporarily

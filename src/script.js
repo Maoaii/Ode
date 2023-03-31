@@ -17,10 +17,12 @@ let messages = ["Hello", "How are you?", "I'm fine", "Goodbye"];
 
 
 topButton.addEventListener("click", () => window.scrollTo({top: 0, behavior: "smooth"}));
-dropdown.addEventListener("click", showDropdown);
 newMessageButton.addEventListener("click", displayNewMessage);
 historyForm.addEventListener("submit", submitHistoryEvent);
 historyImageInput.addEventListener("change", updateImageSaved);
+topButton.addEventListener("click", () => window.scrollTo({top: 0, behavior: "smooth"}));
+dropdown.addEventListener("click", () => document.getElementById("menu").classList.toggle("hidden"));
+newMessageButton.addEventListener("click", displayNewMessage);
 
 // Event listeners for scrolling.
 // Make the "go to top" button appear when scrolling down.
@@ -32,11 +34,6 @@ window.onscroll = function() {
     topButton.style.display = "none";
   }
 };
-
-
-topButton.addEventListener("click", () => window.scrollTo({top: 0, behavior: "smooth"}));
-dropdown.addEventListener("click", () => document.getElementById("menu").classList.toggle("hidden"));
-newMessageButton.addEventListener("click", displayNewMessage);
 
 $(window).on("load", function()  {
   setTimeout(showWebsite, 1000);
