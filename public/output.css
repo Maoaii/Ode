@@ -552,6 +552,12 @@ input, textarea {
   padding: 0.25rem;
 }
 
+.invalid {
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity));
+}
+
 .history-h2 {
   text-align: center;
   font-size: 1.125rem;
@@ -668,8 +674,16 @@ input, textarea {
   bottom: 1.25rem;
 }
 
+.left-1\/4 {
+  left: 25%;
+}
+
 .right-7 {
   right: 1.75rem;
+}
+
+.top-1\/3 {
+  top: 33.333333%;
 }
 
 .top-5 {
@@ -691,6 +705,10 @@ input, textarea {
 
 .mt-10 {
   margin-top: 2.5rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .mt-20 {
@@ -769,6 +787,10 @@ input, textarea {
   min-height: 100vh;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
 .w-3\/5 {
   width: 60%;
 }
@@ -829,6 +851,10 @@ input, textarea {
   gap: 3rem;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .gap-20 {
   gap: 5rem;
 }
@@ -879,6 +905,11 @@ input, textarea {
   border-bottom-width: 4px;
 }
 
+.border-custom-bege {
+  --tw-border-opacity: 1;
+  border-color: rgb(247 239 229 / var(--tw-border-opacity));
+}
+
 .border-custom-dark-blue {
   --tw-border-opacity: 1;
   border-color: rgb(97 117 125 / var(--tw-border-opacity));
@@ -925,6 +956,14 @@ input, textarea {
 
 .bg-cover {
   background-size: cover;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .px-3 {
