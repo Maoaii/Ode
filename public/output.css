@@ -779,8 +779,8 @@ input, textarea {
   height: 2px;
 }
 
-.h-\[60px\] {
-  height: 60px;
+.h-\[80px\] {
+  height: 80px;
 }
 
 .h-px {
@@ -789,10 +789,6 @@ input, textarea {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[80px\] {
-  height: 80px;
 }
 
 .min-h-screen {
@@ -811,20 +807,16 @@ input, textarea {
   width: 80%;
 }
 
+.w-\[80px\] {
+  width: 80px;
+}
+
 .w-full {
   width: 100%;
 }
 
 .w-screen {
   width: 100vw;
-}
-
-.w-\[80px\] {
-  width: 80px;
-}
-
-.max-w-\[160px\] {
-  max-width: 160px;
 }
 
 .max-w-\[200px\] {
@@ -1008,8 +1000,8 @@ input, textarea {
   font-family: Shantell\ Sans, cursive;
 }
 
-.text-6xl {
-  font-size: 3.75rem;
+.text-7xl {
+  font-size: 4.5rem;
   line-height: 1;
 }
 
@@ -1021,16 +1013,6 @@ input, textarea {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-7xl {
-  font-size: 4.5rem;
-  line-height: 1;
-}
-
-.text-8xl {
-  font-size: 6rem;
-  line-height: 1;
 }
 
 .uppercase {
