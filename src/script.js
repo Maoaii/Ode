@@ -213,11 +213,12 @@ function openConfirmationPopup(event) {
   
   popupContainer.classList.add("fixed", "top-1/3", "left-1/4", "w-1/2", "p-4", "bg-bg-color",
                                  "border-b-4", "border-custom-bege", "rounded-md", "shadow-md");
+  popupHeader.classList.add("lg:text-2xl")
   buttonContainer.classList.add("mt-2", "flex", "gap-2", "place-content-center");
   noButton.classList.add("border-b-4", "p-2", "dynamic-button", "bg-custom-light-purple",  "border-custom-purple");
-  yesButton.classList.add("border-b-4", "p-2", "dynamic-button", "bg-custom-light-purple",  "border-custom-purple");
+  yesButton.classList.add("border-2", "p-2", "dynamic-button",  "border-custom-purple", "active:border-b-2");
 
-  popupHeader.textContent = "Tens a certeza que queres apagar história?";
+  popupHeader.textContent = "Tens a certeza que queres apagar a história?";
   noButton.textContent = "Não";
   yesButton.textContent = "Sim";
 
