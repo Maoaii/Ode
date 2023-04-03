@@ -866,6 +866,14 @@ input, textarea {
   max-width: 200px;
 }
 
+.max-w-\[300px\] {
+  max-width: 300px;
+}
+
+.max-w-\[250px\] {
+  max-width: 250px;
+}
+
 .resize {
   resize: both;
 }
@@ -1060,6 +1068,11 @@ input, textarea {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .uppercase {
