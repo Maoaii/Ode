@@ -568,7 +568,16 @@ h1 {
 }
 
 h2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
   font-weight: 700;
+}
+
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 input, textarea {
@@ -818,12 +827,8 @@ input, textarea {
   height: 3rem;
 }
 
-.h-6 {
-  height: 1.5rem;
-}
-
-.h-80 {
-  height: 20rem;
+.h-20 {
+  height: 5rem;
 }
 
 .h-\[2px\] {
@@ -840,18 +845,6 @@ input, textarea {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-10 {
-  height: 2.5rem;
-}
-
-.h-20 {
-  height: 5rem;
-}
-
-.h-4 {
-  height: 1rem;
 }
 
 .min-h-screen {
@@ -934,22 +927,6 @@ input, textarea {
   gap: 1.5rem;
 }
 
-.overflow-scroll {
-  overflow: scroll;
-}
-
-.overflow-y-auto {
-  overflow-y: auto;
-}
-
-.overflow-x-scroll {
-  overflow-x: scroll;
-}
-
-.overflow-y-scroll {
-  overflow-y: scroll;
-}
-
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1015,11 +992,6 @@ input, textarea {
   border-color: rgb(103 65 136 / var(--tw-border-opacity));
 }
 
-.border-custom-light-blue {
-  --tw-border-opacity: 1;
-  border-color: rgb(160 195 210 / var(--tw-border-opacity));
-}
-
 .bg-bg-color {
   --tw-bg-opacity: 1;
   background-color: rgb(255 251 245 / var(--tw-bg-opacity));
@@ -1064,10 +1036,6 @@ input, textarea {
 
 .p-4 {
   padding: 1rem;
-}
-
-.p-8 {
-  padding: 2rem;
 }
 
 .px-3 {

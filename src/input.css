@@ -101,7 +101,7 @@ a:hover, button:hover {
     }
 
     h2 {
-      @apply font-bold;
+      @apply font-bold text-xl lg:text-2xl;
     }
 
     input, textarea {
