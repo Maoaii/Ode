@@ -1120,11 +1120,11 @@ input, textarea {
 }
 
 :root {
-  cursor: url(/img/cursor/icon_medium.png) -32 -32, auto;
+  cursor: url(/img/icon_medium.png) -32 -32, auto;
 }
 
 a:hover, button:hover {
-  cursor: url(/img/cursor/icon_hover.png) -32 -32, auto;
+  cursor: url(/img/icon_hover.png) -32 -32, auto;
 }
 
 *:active {
@@ -1135,11 +1135,11 @@ a:hover, button:hover {
 
 @keyframes shoot {
   from {
-    cursor: url(/img/cursor/icon_click.png) 10 10, auto;
+    cursor: url(/img/icon_click.png) 10 10, auto;
   }
 
   to {
-    cursor: url(/img/cursor/icon_click2.png), auto;
+    cursor: url(/img/icon_click2.png), auto;
   }
 }
 
