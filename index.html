@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./public/output.css">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="./img/favicon_io/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="./public/assets/img/favicon-16x16.png">
 
     <!-- Scripts -->
     <script src="./src/script.js" defer></script>    
@@ -31,9 +31,9 @@
     <button id="top-button" class="fixed hidden z-50 bottom-5 right-7 rounded-full bg-custom-purple-faded h-[80px] w-[80px]" 
     title="Go to top"><span class="material-symbols-rounded text-7xl">expand_less</span></button>
 
-    <header class="hidden min-h-screen w-screen bg-cover" style="background-image: url(img/elementor-placeholder-image.webp);">
+    <header class="hidden min-h-screen w-screen bg-cover" style="background-image: url(./public/assets/img/elementor-placeholder-image.webp);">
         <nav id="navbar" class="
-        relative top-5 max-w-[200px] mx-auto px-3 border-b-2
+        relative top-5 max-w-[250px] mx-auto px-3 border-b-2 text-xl
         bg-custom-light-purple border-custom-purple 
         rounded-md shadow-md
         lg:max-w-[400px] lg:text-3xl">
@@ -71,8 +71,17 @@
             </div>
 
             <p>
-                Lorem ipsum dolor sit amet consectetur. Potenti mollis sed aliquet amet tristique mi. 
-                Nisl augue amet a quam ullamcorper a scelerisque pharetra. 
+                <h1>
+                    Olá meu amor!
+                </h1>
+                Decidi dar frutos á minha musa e criar uma Ode para ti. 
+                É aqui que vais encontrar algumas das coisas que mais gosto em ti,
+                algumas coisas para aquecer esse teu sorriso e, ainda, alguma
+                história nossa!
+                <br>
+                <br>
+                Espero que estejas sentada para esta viagem inesquecível atrás no tempo.
+                Vamos lá!
             </p>
         
             <video controls>
@@ -88,11 +97,12 @@
             </div>
 
             <div class="flex flex-col items-center gap-12">
-                <div class="title-box">
+                
+                <!-- <div class="title-box">
                     <h2>
                         Lorem ipsum
                     </h2>
-                </div>
+                </div> -->
 
                 <p>
                     Lorem ipsum dolor sit amet consectetur. Potenti mollis sed aliquet amet tristique mi. 
@@ -101,7 +111,7 @@
                     Feugiat semper at sodales convallis felis molestie pulvinar at. 
                 </p>
 
-                <img class="rounded-xl lg:w-3/4" src="img/elementor-placeholder-image.webp" alt="">
+                <img class="rounded-xl lg:w-3/4" src="public/assets/img/elementor-placeholder-image.webp" alt="">
             </div>
         </section>
 
@@ -111,6 +121,17 @@
                 <div class="title-box bg-custom-light-blue border-custom-dark-blue">
                     <h1>A nossa História</h1>
                 </div>
+
+                <p>
+                    <h1>
+                        Bem vinda á nossa história!
+                    </h1>
+                    Vais encontrar aqui os momentos mais marcantes da nossa relação que nos levaram até aqui.
+                    Para além disso, vais poder construir a nossa história juntamente comigo aqui mesmo!
+                    <br>
+                    <br>
+                    Experimenta adicionar uma história de hoje no final desta secção. Vemo-nos lá em baixo!
+                </p>
 
                 <div id="history-container" class="lg:w-4/5 w-full flex flex-col gap-12 mx-auto">
                     <form id="history-form" action="#" class="flex items-center gap-4">
@@ -156,20 +177,30 @@
             </section>
         </div>
 
-        <section id="motivacao" class="flex flex-col w-4/5 mx-auto mb-20 h-80">
+        <section id="motivacao" class="flex flex-col w-4/5 mx-auto mb-20">
             <div class="title-box">
                 <h1>Motivação</h1>
             </div>
 
             <div class="mt-10">
-                <p id="messages-container" class="break-words h-6">
-                    asdsadsaasdsadsaasdsadsaasdsadsaasdsadsaasdsadsaasdsadsaasdsadsaasdsadsa
+                <p>
+                    Aqui tens algumas mensagens das pessoas que estão mais próximas de ti.
+                    Foram todas escritas com muito amor, portanto desfruta!
                 </p>
 
-                <button id="new-message-button" 
-                    class="dynamic-button mt-20 border-custom-purple bg-custom-light-purple">
-                    Nova Mensagem
-                </button>
+                <p id="messages-container" class="break-words mt-8 p-4 border-4 border-custom-purple rounded-md">
+                    asdsadsaasdsadsaasdsadsaasdsadsaasdsadsaasdsadsaasdsadsaasdsadsaasdsadsaaskljdlsakjd
+                    asdsadsaasdsadsaasdsadsaasdsadsaasdsadsaasdsadsaasdsadsaasdsadsaasdsadsaaskljdlsakjd
+                    asdsadsaasdsadsaasdsadsaasdsadsaasdsadsaasdsadsaasdsadsaasdsadsaasdsadsaaskljdlsakjd
+                    asdsadsaasdsadsaasdsadsaasdsadsaasdsadsaasdsadsaasdsadsaasdsadsaasdsadsaaskljdlsakjd
+                </p>
+                
+                <div class="h-20 mt-20">
+                    <button id="new-message-button" 
+                        class="dynamic-button  border-custom-purple bg-custom-light-purple">
+                        Nova Mensagem
+                    </button>
+                </div>
             </div>
 
         </section class="flex flex-col w-4/5 min-h-screen mx-auto">

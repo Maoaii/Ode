@@ -770,6 +770,10 @@ input, textarea {
   margin-top: 1rem;
 }
 
+.mt-8 {
+  margin-top: 2rem;
+}
+
 .block {
   display: block;
 }
@@ -838,6 +842,18 @@ input, textarea {
   height: 100vh;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
+.h-4 {
+  height: 1rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -862,8 +878,8 @@ input, textarea {
   width: 100vw;
 }
 
-.max-w-\[200px\] {
-  max-width: 200px;
+.max-w-\[250px\] {
+  max-width: 250px;
 }
 
 .resize {
@@ -918,6 +934,22 @@ input, textarea {
   gap: 1.5rem;
 }
 
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -952,6 +984,10 @@ input, textarea {
   border-width: 2px;
 }
 
+.border-4 {
+  border-width: 4px;
+}
+
 .border-b-2 {
   border-bottom-width: 2px;
 }
@@ -977,6 +1013,11 @@ input, textarea {
 .border-custom-purple {
   --tw-border-opacity: 1;
   border-color: rgb(103 65 136 / var(--tw-border-opacity));
+}
+
+.border-custom-light-blue {
+  --tw-border-opacity: 1;
+  border-color: rgb(160 195 210 / var(--tw-border-opacity));
 }
 
 .bg-bg-color {
@@ -1023,6 +1064,10 @@ input, textarea {
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-8 {
+  padding: 2rem;
 }
 
 .px-3 {
@@ -1120,26 +1165,26 @@ input, textarea {
 }
 
 :root {
-  cursor: url(./img/cursor/icon_medium.png) -32 -32, auto;
+  cursor: url(assets/img/icon-medium.png) -32 -32, auto;
 }
 
 a:hover, button:hover {
-  cursor: url(./img/cursor/icon_hover.png) -32 -32, auto;
+  cursor: url(assets/img/icon-hover.png) -32 -32, auto;
 }
 
 *:active {
-  cursor: url(./icon_click2.png), auto;
+  cursor: url(assets/img/icon-click.png), auto;
   animation-name: shoot;
   animation-duration: 0.5s;
 }
 
 @keyframes shoot {
   from {
-    cursor: url(./img/cursor/icon_click.png) 10 10, auto;
+    cursor: url(assets/img/icon-click.png) 10 10, auto;
   }
 
   to {
-    cursor: url(./img/cursor/icon_click2.png), auto;
+    cursor: url(assets/img/icon-click2.png), auto;
   }
 }
 
