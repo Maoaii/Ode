@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  cursor: url(assets/img/icon_medium.png) -32 -32, auto;
+  cursor: url(assets/img/icon-medium.png) -32 -32, auto;
 }
 
 a:hover, button:hover {
