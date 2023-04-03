@@ -3,26 +3,26 @@
 @tailwind utilities;
 
 :root {
-    cursor: url(/img/icon_medium.png) -32 -32, auto;
+  cursor: url(/src/img/icon_medium.png) -32 -32, auto;
 }
 
 a:hover, button:hover {
-    cursor: url(/img/icon_hover.png) -32 -32, auto;
+  cursor: url(/src/img/icon_hover.png) -32 -32, auto;
 }
 
 *:active {
-    cursor: url(/icon_click2.png), auto;
+    cursor: url(/src/img/icon_click.png), auto;
     animation-name: shoot;
     animation-duration: 0.5s;
 }
 
 @keyframes shoot {
     from {
-        cursor: url(/img/icon_click.png) 10 10, auto;
+        cursor: url(/src/img/icon_click.png) 10 10, auto;
     }
 
     to {
-        cursor: url(/img/icon_click2.png), auto;
+        cursor: url(/src/img/icon_click2.png), auto;
     }
 }
 
