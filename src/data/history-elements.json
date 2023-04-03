@@ -1,0 +1,9 @@
+{
+    "day": "01",
+    "month": "04", 
+    "year": "2019", 
+    "imagePath": "public/assets/img/elementor-placeholder-image.webp", 
+    "description": "hello", 
+    "historyIndex": 0, 
+    "isPast": true
+}

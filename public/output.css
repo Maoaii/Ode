@@ -680,15 +680,15 @@ input, textarea {
 
 .date-circle {
   display: flex;
-  height: 4rem;
-  width: 4rem;
+  height: 5rem;
+  width: 5rem;
   flex-shrink: 0;
   flex-grow: 0;
   align-items: center;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgb(160 195 210 / var(--tw-bg-opacity));
-  padding: 0.5rem;
+  padding-left: 0.5rem;
   font-size: 0.75rem;
   line-height: 1rem;
 }
@@ -773,10 +773,6 @@ input, textarea {
 
 .mt-20 {
   margin-top: 5rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
 }
 
 .mt-8 {

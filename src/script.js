@@ -9,12 +9,13 @@ const historyImageInput = document.getElementById("image-input");
 
 
 const pastHistoryElements = [
-  {month: "04", year: "2019", imagePath: "public/assets/img/elementor-placeholder-image.webp", description: "hello", historyIndex: 0, isPast: true}
+  {day: "01", month: "04", year: "2019", imagePath: "public/assets/img/elementor-placeholder-image.webp", description: "hello", historyIndex: 0, isPast: true}
 ];
 let historyElements = [];
 let currentIndex = 0;
-let messages = ["Hello", "How are you?", "I'm fine", "Goodbye"];
-
+let messages = [
+  "A Martinha é desarrumada, muito dorminhoca e deixa uma pessoa louca com o seu despertador! Apesar disso tudo, é uma amiga protetora, muito doce, alegre e tenho muito orgulho nela. Amo-a muito!"
+];
 
 topButton.addEventListener("click", () => window.scrollTo({top: 0, behavior: "smooth"}));
 newMessageButton.addEventListener("click", displayNewMessage);
@@ -63,7 +64,7 @@ function showWebsite() {
 
 // Past history elements that won't be available for change
 pastHistoryElements.forEach((historyElement) => {
-  addHistoryElement(historyElement.month, historyElement.year, 
+  addHistoryElement(historyElement.day, historyElement.month, historyElement.year, 
                     historyElement.imagePath, historyElement.description, historyElement.historyIndex, isPast=true);
 });
 
@@ -116,6 +117,7 @@ function submitHistoryEvent(event) {
   }
   
   const element = {
+    day: date[2],
     month: date[1],
     year: date[0],
     imagePath: image,
@@ -124,7 +126,7 @@ function submitHistoryEvent(event) {
   };
   
   historyElements.push(element);
-  addHistoryElement(element.month, element.year, element.imagePath, element.description, element.historyIndex);
+  addHistoryElement(element.day, element.month, element.year, element.imagePath, element.description, element.historyIndex);
 
   saveData("historyElements", historyElements);
   saveData("historyIndex", currentIndex);
@@ -157,7 +159,7 @@ function cleanInputs() {
 
 
 
-function addHistoryElement(month, year, imagePath, descriptionText, index, isPast) {
+function addHistoryElement(day, month, year, imagePath, descriptionText, index, isPast) {
   const container = document.createElement("div");
   const dateContainer = document.createElement("div");
   const date = document.createElement("p");
@@ -170,10 +172,11 @@ function addHistoryElement(month, year, imagePath, descriptionText, index, isPas
   container.setAttribute("data-historyIndex", index)
   dateContainer.classList.add("date-circle");
   historyBox.classList.add("history-box");
-  description.classList.add("mt-4");
+  description.classList.add("mt4");
+  date.classList.add("break-words")
   
 
-  date.textContent = month + " - " + year;
+  date.textContent = day + "/" + month + "/" + year;
   description.textContent = descriptionText;
   
 
