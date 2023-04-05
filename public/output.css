@@ -676,7 +676,7 @@ input, textarea {
 }
 
 .history-box {
-  max-width: 20rem;
+  max-width: 24rem;
   border-radius: 0.5rem;
   border-bottom-width: 4px;
   --tw-border-opacity: 1;
@@ -699,6 +699,7 @@ input, textarea {
 @media (min-width: 1024px) {
   .history-box {
     width: 50%;
+    max-width: 32rem;
     padding: 1.25rem;
   }
 }
@@ -799,6 +800,10 @@ input, textarea {
 
 .mt-20 {
   margin-top: 5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .mt-8 {
@@ -1162,6 +1167,17 @@ a:hover, button:hover {
   cursor: url(assets/img/icon-hover.png) -32 -32, auto;
 }
 
+header {
+  background-image: url(assets/img/bg.jpg);
+  background-position: center center;
+}
+
+@media screen and (min-width: 500px) {
+  header {
+    background-image: url(assets/img/bg3-cropped.jpeg);
+  }
+}
+
 *:active {
   cursor: url(assets/img/icon-click.png), auto;
   animation-name: shoot;
@@ -1255,12 +1271,12 @@ a:hover, button:hover {
 }
 
 @media (min-width: 1024px) {
-  .lg\:w-3\/4 {
-    width: 75%;
+  .lg\:w-1\/4 {
+    width: 25%;
   }
 
-  .lg\:w-4\/5 {
-    width: 80%;
+  .lg\:w-3\/4 {
+    width: 75%;
   }
 
   .lg\:max-w-\[400px\] {

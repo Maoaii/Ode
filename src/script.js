@@ -9,23 +9,26 @@ const historyImageInput = document.getElementById("image-input");
 
 
 const pastHistoryElements = [
-  {day: "06", month: "02", year: "2019", imagePath: "public/assets/img/historyphotos/2019-02-06.jpeg", description: "hello!", historyIndex: 1, isPast: true},
-  {day: "06", month: "03", year: "2019", imagePath: "public/assets/img/historyphotos/2019-03-06.jpg", description: "hello!", historyIndex: 1, isPast: true},
-  {day: "31", month: "07", year: "2019", imagePath: "public/assets/img/historyphotos/2019-07-31.jpg", description: "hello!", historyIndex: 1, isPast: true},
-  {day: "15", month: "01", year: "2020", imagePath: "public/assets/img/historyphotos/2020-01-15.jpg", description: "hello!", historyIndex: 1, isPast: true},
-  {day: "26", month: "03", year: "2020", imagePath: "public/assets/img/historyphotos/2020-03-26.jpg", description: "hello!", historyIndex: 1, isPast: true},
-  {day: "30", month: "04", year: "2020", imagePath: "public/assets/img/historyphotos/2020-04-30.jpg", description: "hello!", historyIndex: 1, isPast: true},
-  {day: "27", month: "05", year: "2020", imagePath: "public/assets/img/historyphotos/2020-05-27.jpg", description: "hello!", historyIndex: 1, isPast: true},
-  {day: "15", month: "09", year: "2020", imagePath: "public/assets/img/historyphotos/2020-09-15.jpg", description: "hello!", historyIndex: 1, isPast: true},
-  {day: "27", month: "09", year: "2020", imagePath: "public/assets/img/historyphotos/2020-09-27.jpg", description: "hello!", historyIndex: 1, isPast: true},
-  {day: "20", month: "02", year: "2021", imagePath: "public/assets/img/historyphotos/2021-02-20.jpg", description: "hello!", historyIndex: 1, isPast: true},
-  {day: "21", month: "08", year: "2021", imagePath: "public/assets/img/historyphotos/2021-08-21.jpg", description: "hello!", historyIndex: 1, isPast: true},
-  {day: "11", month: "09", year: "2021", imagePath: "public/assets/img/historyphotos/2021-09-11.jpg", description: "hello!", historyIndex: 1, isPast: true},
+  {day: "06", month: "02", year: "2019", imagePath: "public/assets/img/historyphotos/2019-02-06.jpeg", description: "Lembras-te disto? Ainda não namorávamos e tivemos o nosso primeiro 'date'...\nFoi um momento muito querido e cheio de borboletas na barriga!", historyIndex: 1, isPast: true},
+  {day: "06", month: "03", year: "2019", imagePath: "public/assets/img/historyphotos/2019-03-06.jpg", description: "Pouco tempo depois desse date tive a oportunidade de fazer a primeira supresa e mostrar os meus dotes engatatões haha.", historyIndex: 1, isPast: true},
+  {day: "31", month: "07", year: "2019", imagePath: "public/assets/img/historyphotos/2019-07-31.jpg", description: "Já namorávamos há pouco tempo e fomos numa super viagem ao X! Verdade que não andámos em muita coisa, mas foi uma aventura em pêras!", historyIndex: 1, isPast: true},
+  {day: "15", month: "01", year: "2020", imagePath: "public/assets/img/historyphotos/2020-01-15.jpg", description: "Este momento é grande hahah! O início da tua super coleção de peluches para a cama. Trazê-lo até tua casa foi a melhor parte :).", historyIndex: 1, isPast: true},
+  // {day: "26", month: "03", year: "2020", imagePath: "public/assets/img/historyphotos/2020-03-26.jpg", description: "hello!", historyIndex: 1, isPast: true},
+  {day: "30", month: "04", year: "2020", imagePath: "public/assets/img/historyphotos/2020-04-30.jpg", description: "Estas aventuras com o Gladiador vão ficar para sempre marcadas e eternizadas aqui <3", historyIndex: 1, isPast: true},
+  // {day: "27", month: "05", year: "2020", imagePath: "public/assets/img/historyphotos/2020-05-27.jpg", description: "hello!", historyIndex: 1, isPast: true},
+  {day: "15", month: "09", year: "2020", imagePath: "public/assets/img/historyphotos/2020-09-15.jpg", description: "Mais um para a coleção! ", historyIndex: 1, isPast: true},
+  // {day: "27", month: "09", year: "2020", imagePath: "public/assets/img/historyphotos/2020-09-27.jpg", description: "hello!", historyIndex: 1, isPast: true},
+  {day: "20", month: "02", year: "2021", imagePath: "public/assets/img/historyphotos/2021-02-20.jpg", description: "18 anitos da piquena! Foi a partir daqui que começaste a ganhar asas e tens crescido imenso desde então. Claro que tinha de haver uma com os zezocas hehe.", historyIndex: 1, isPast: true},
+  {day: "23", month: "05", year: "2021", imagePath: "public/assets/img/historyphotos/2021-05-23.jpeg", description: "", historyIndex: 1, isPast: true},
+  {day: "21", month: "08", year: "2021", imagePath: "public/assets/img/historyphotos/2021-08-21.jpg", description: "Este verão foi repleto de casamentos e, vamos ser sincero, nós arrasámos todos.", historyIndex: 1, isPast: true},
+  {day: "11", month: "09", year: "2021", imagePath: "public/assets/img/historyphotos/2021-09-11.jpg", description: "", historyIndex: 1, isPast: true},
   {day: "18", month: "12", year: "2021", imagePath: "public/assets/img/historyphotos/2021-12-18.jpg", description: "hello!", historyIndex: 1, isPast: true},
   {day: "14", month: "02", year: "2022", imagePath: "public/assets/img/historyphotos/2022-02-14.jpg", description: "hello!", historyIndex: 1, isPast: true},
   {day: "13", month: "03", year: "2022", imagePath: "public/assets/img/historyphotos/2022-03-13.jpg", description: "hello!", historyIndex: 1, isPast: true},
   {day: "08", month: "04", year: "2022", imagePath: "public/assets/img/historyphotos/2022-04-08.jpg", description: "hello!", historyIndex: 1, isPast: true},
   {day: "17", month: "08", year: "2022", imagePath: "public/assets/img/historyphotos/2022-08-17.jpg", description: "hello!", historyIndex: 1, isPast: true},
+  {day: "06", month: "10", year: "2022", imagePath: "public/assets/img/historyphotos/2022-10-06.jpg", description: "hello!", historyIndex: 1, isPast: true},
+  {day: "04", month: "11", year: "2022", imagePath: "public/assets/img/historyphotos/2022-11-04.jpg", description: "hello!", historyIndex: 1, isPast: true},
 ];
 let historyElements = [];
 let currentIndex = 0;
@@ -187,7 +190,7 @@ function addHistoryElement(day, month, year, imagePath, descriptionText, index, 
   container.classList.add("flex", "items-center", "gap-4", "place-content-center");
   dateContainer.classList.add("date-circle");
   historyBox.classList.add("history-box");
-  description.classList.add("mt4");
+  description.classList.add("mt-4");
   date.classList.add("break-words", "my-auto", "p-2")
   
   container.setAttribute("data-historyIndex", index)
