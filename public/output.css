@@ -676,14 +676,14 @@ input, textarea {
 }
 
 .history-box {
-  width: 100%;
+  max-width: 20rem;
   border-radius: 0.5rem;
   border-bottom-width: 4px;
   --tw-border-opacity: 1;
   border-color: rgb(97 117 125 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(160 195 210 / var(--tw-bg-opacity));
-  padding: 1.25rem;
+  padding: 0.75rem;
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -692,33 +692,34 @@ input, textarea {
 @media (min-width: 768px) {
   .history-box {
     width: 50%;
+    padding: 1.25rem;
   }
 }
 
 @media (min-width: 1024px) {
   .history-box {
     width: 50%;
+    padding: 1.25rem;
   }
 }
 
 .date-circle {
   display: flex;
-  height: 5rem;
-  width: 5rem;
+  height: 4rem;
+  width: 4rem;
   place-content: center;
+  overflow-wrap: break-word;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgb(160 195 210 / var(--tw-bg-opacity));
-  font-size: 0.75rem;
-  line-height: 1rem;
+  font-size: 0.6rem;
 }
 
 @media (min-width: 1024px) {
   .date-circle {
-    height: 8rem;
-    width: 8rem;
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+    height: 6rem;
+    width: 6rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -890,18 +891,6 @@ input, textarea {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-3\/5 {
-  width: 60%;
-}
-
-.w-2\/5 {
-  width: 40%;
-}
-
-.w-2\/3 {
-  width: 66.666667%;
 }
 
 .max-w-\[250px\] {

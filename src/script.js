@@ -181,24 +181,21 @@ function addHistoryElement(day, month, year, imagePath, descriptionText, index, 
   const dateContainer = document.createElement("div");
   const date = document.createElement("p");
   const historyBox = document.createElement("div");
-  
   const image = document.createElement("img");
   const description = document.createElement("p");
 
   container.classList.add("flex", "items-center", "gap-4", "place-content-center");
-  container.setAttribute("data-historyIndex", index)
   dateContainer.classList.add("date-circle");
   historyBox.classList.add("history-box");
   description.classList.add("mt4");
-  date.classList.add("break-words", "my-auto")
+  date.classList.add("break-words", "my-auto", "p-2")
   
-
+  container.setAttribute("data-historyIndex", index)
+  image.setAttribute("src", imagePath);
+  
   date.textContent = day + "/" + month + "/" + year;
   description.textContent = descriptionText;
   
-
-  image.setAttribute("src", imagePath);
-
   if (!isPast) {
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "X";
