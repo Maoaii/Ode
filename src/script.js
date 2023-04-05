@@ -16,24 +16,25 @@ const pastHistoryElements = [
   // {day: "26", month: "03", year: "2020", imagePath: "public/assets/img/historyphotos/2020-03-26.jpg", description: "hello!", historyIndex: 1, isPast: true},
   {day: "30", month: "04", year: "2020", imagePath: "public/assets/img/historyphotos/2020-04-30.jpg", description: "Estas aventuras com o Gladiador vão ficar para sempre marcadas e eternizadas aqui <3", historyIndex: 1, isPast: true},
   // {day: "27", month: "05", year: "2020", imagePath: "public/assets/img/historyphotos/2020-05-27.jpg", description: "hello!", historyIndex: 1, isPast: true},
-  {day: "15", month: "09", year: "2020", imagePath: "public/assets/img/historyphotos/2020-09-15.jpg", description: "Mais um para a coleção! ", historyIndex: 1, isPast: true},
+  {day: "15", month: "09", year: "2020", imagePath: "public/assets/img/historyphotos/2020-09-15.jpg", description: "Mais um para a coleção! Nunca me vou cansar de ir ao oceanário, principalmente contigo!", historyIndex: 1, isPast: true},
   // {day: "27", month: "09", year: "2020", imagePath: "public/assets/img/historyphotos/2020-09-27.jpg", description: "hello!", historyIndex: 1, isPast: true},
   {day: "20", month: "02", year: "2021", imagePath: "public/assets/img/historyphotos/2021-02-20.jpg", description: "18 anitos da piquena! Foi a partir daqui que começaste a ganhar asas e tens crescido imenso desde então. Claro que tinha de haver uma com os zezocas hehe.", historyIndex: 1, isPast: true},
-  {day: "23", month: "05", year: "2021", imagePath: "public/assets/img/historyphotos/2021-05-23.jpeg", description: "", historyIndex: 1, isPast: true},
+  {day: "23", month: "05", year: "2021", imagePath: "public/assets/img/historyphotos/2021-05-23.jpeg", description: "Ests dates são incríveis e ir ao zoo foi um dos dates mais engraçados que tivemos! (aquele hack do McDonald's...)", historyIndex: 1, isPast: true},
   {day: "21", month: "08", year: "2021", imagePath: "public/assets/img/historyphotos/2021-08-21.jpg", description: "Este verão foi repleto de casamentos e, vamos ser sincero, nós arrasámos todos.", historyIndex: 1, isPast: true},
-  {day: "11", month: "09", year: "2021", imagePath: "public/assets/img/historyphotos/2021-09-11.jpg", description: "", historyIndex: 1, isPast: true},
-  {day: "18", month: "12", year: "2021", imagePath: "public/assets/img/historyphotos/2021-12-18.jpg", description: "hello!", historyIndex: 1, isPast: true},
-  {day: "14", month: "02", year: "2022", imagePath: "public/assets/img/historyphotos/2022-02-14.jpg", description: "hello!", historyIndex: 1, isPast: true},
-  {day: "13", month: "03", year: "2022", imagePath: "public/assets/img/historyphotos/2022-03-13.jpg", description: "hello!", historyIndex: 1, isPast: true},
-  {day: "08", month: "04", year: "2022", imagePath: "public/assets/img/historyphotos/2022-04-08.jpg", description: "hello!", historyIndex: 1, isPast: true},
-  {day: "17", month: "08", year: "2022", imagePath: "public/assets/img/historyphotos/2022-08-17.jpg", description: "hello!", historyIndex: 1, isPast: true},
-  {day: "06", month: "10", year: "2022", imagePath: "public/assets/img/historyphotos/2022-10-06.jpg", description: "hello!", historyIndex: 1, isPast: true},
-  {day: "04", month: "11", year: "2022", imagePath: "public/assets/img/historyphotos/2022-11-04.jpg", description: "hello!", historyIndex: 1, isPast: true},
+  {day: "11", month: "09", year: "2021", imagePath: "public/assets/img/historyphotos/2021-09-11.jpg", description: "Mais um casamento haha. Eles só são toleráveis quando te tenho como par <3", historyIndex: 1, isPast: true},
+  // {day: "18", month: "12", year: "2021", imagePath: "public/assets/img/historyphotos/2021-12-18.jpg", description: "", historyIndex: 1, isPast: true},
+  // {day: "14", month: "02", year: "2022", imagePath: "public/assets/img/historyphotos/2022-02-14.jpg", description: "", historyIndex: 1, isPast: true},
+  // {day: "13", month: "03", year: "2022", imagePath: "public/assets/img/historyphotos/2022-03-13.jpg", description: "hello!", historyIndex: 1, isPast: true},
+  {day: "08", month: "04", year: "2022", imagePath: "public/assets/img/historyphotos/2022-04-08.jpg", description: "Não há palavras para descrever o que esta viagem significou. Foi um dos melhores momentos de sempre e abriu horizontes para mais experiências dessas. Fica aqui a memória :P", historyIndex: 1, isPast: true},
+  {day: "17", month: "08", year: "2022", imagePath: "public/assets/img/historyphotos/2022-08-17.jpg", description: "Okay, esta era muito funny para não colocar haha. Foi um date aleatório e espontâneo que levou a momentos destes! Só tu mesmo :)", historyIndex: 1, isPast: true},
+  {day: "06", month: "10", year: "2022", imagePath: "public/assets/img/historyphotos/2022-10-06.jpg", description: "Só tenho a dizer: devíamos ter ganho!", historyIndex: 1, isPast: true},
+  {day: "04", month: "11", year: "2022", imagePath: "public/assets/img/historyphotos/2022-11-04.jpg", description: "Quem diria que até as coisas mais simples seriam tão divertidas acompanhado de ti?", historyIndex: 1, isPast: true},
 ];
 let historyElements = [];
 let currentIndex = 0;
 let messages = [
-  "A Martinha é desarrumada, muito dorminhoca e deixa uma pessoa louca com o seu despertador! Apesar disso tudo, é uma amiga protetora, muito doce, alegre e tenho muito orgulho nela. Amo-a muito!"
+  "A Martinha é desarrumada, muito dorminhoca e deixa uma pessoa louca com o seu despertador! Apesar disso tudo, é uma amiga protetora, muito doce, alegre e tenho muito orgulho nela. Amo-a muito!",
+  "Minha menina de ouro, orgulho da tua família. Não sabes bem quem eu sou mas eu te amo tanto mas tanto! Tenho um orgulho enorme em te ter na minh vida, love you 🤍"
 ];
 
 topButton.addEventListener("click", () => window.scrollTo({top: 0, behavior: "smooth"}));
@@ -278,7 +279,11 @@ function deleteHistory(event) {
 }
 
 function displayNewMessage() {
-  const newMessage = messages[Math.floor(Math.random() * messages.length)];
+  let newMessage = messages[Math.floor(Math.random() * messages.length)];
+
+  while (newMessage === messagesContainer.textContent) {
+    newMessage = messages[Math.floor(Math.random() * messages.length)];
+  }
 
   messagesContainer.textContent = newMessage;
 }
