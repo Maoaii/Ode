@@ -66,6 +66,7 @@ $(window).on("load", function()  {
   setTimeout(showWebsite, 1000);
   getHistoryElements();
   getCurrentIndex();
+  displayNewMessage();
   saveData("image", null);
 });
 

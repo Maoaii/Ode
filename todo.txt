@@ -2,7 +2,6 @@
 - Add description to about you
 - Add shortcut to form
 - Change click color of menu hamburguer
-- Make first message in messages one of the messages stored
 
 CREDITS
 - Add heart loading screen (heart pumps and background color changes) - https://codepen.io/bbosmedia/pen/pZOqqP
