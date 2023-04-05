@@ -145,7 +145,7 @@ a:hover, button:hover {
     }
 
     .date-circle {
-      @apply bg-custom-light-blue pl-2 w-20 h-20 lg:w-28 lg:h-28 rounded-full grow-0 shrink-0 text-xs lg:text-xl flex items-center;
+      @apply bg-custom-light-blue w-20 h-20 lg:w-32 lg:h-32 rounded-full text-xs lg:text-lg flex place-content-center;
     }
 
     .expanded {

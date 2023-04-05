@@ -190,7 +190,7 @@ function addHistoryElement(day, month, year, imagePath, descriptionText, index, 
   dateContainer.classList.add("date-circle");
   historyBox.classList.add("history-box");
   description.classList.add("mt4");
-  date.classList.add("break-words")
+  date.classList.add("break-words", "my-auto")
   
 
   date.textContent = day + "/" + month + "/" + year;

@@ -705,22 +705,19 @@ input, textarea {
   display: flex;
   height: 5rem;
   width: 5rem;
-  flex-shrink: 0;
-  flex-grow: 0;
-  align-items: center;
+  place-content: center;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgb(160 195 210 / var(--tw-bg-opacity));
-  padding-left: 0.5rem;
   font-size: 0.75rem;
   line-height: 1rem;
 }
 
 @media (min-width: 1024px) {
   .date-circle {
-    height: 7rem;
-    width: 7rem;
-    font-size: 1.25rem;
+    height: 8rem;
+    width: 8rem;
+    font-size: 1.125rem;
     line-height: 1.75rem;
   }
 }
@@ -780,6 +777,11 @@ input, textarea {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .mb-20 {
@@ -888,6 +890,18 @@ input, textarea {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-3\/5 {
+  width: 60%;
+}
+
+.w-2\/5 {
+  width: 40%;
+}
+
+.w-2\/3 {
+  width: 66.666667%;
 }
 
 .max-w-\[250px\] {
