@@ -1,7 +1,6 @@
 - Add description to history
 - Add description to about you
 - Add shortcut to form
-- Decrease image size on desktop
 
 CREDITS
 - Add heart loading screen (heart pumps and background color changes) - https://codepen.io/bbosmedia/pen/pZOqqP

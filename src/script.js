@@ -185,7 +185,7 @@ function addHistoryElement(day, month, year, imagePath, descriptionText, index, 
   const image = document.createElement("img");
   const description = document.createElement("p");
 
-  container.classList.add("flex", "items-center", "gap-4");
+  container.classList.add("flex", "items-center", "gap-4", "place-content-center");
   container.setAttribute("data-historyIndex", index)
   dateContainer.classList.add("date-circle");
   historyBox.classList.add("history-box");
