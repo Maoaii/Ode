@@ -96,6 +96,14 @@ a:hover, button:hover {
 }
 
 @layer components {
+  a:hover {
+    @apply text-custom-purple;
+  }
+
+  a:active {
+    @apply text-custom-darker-purple;
+  }
+
     h1 {
       @apply lg:text-5xl md:text-4xl text-xl font-bold;
     }

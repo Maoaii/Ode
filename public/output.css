@@ -547,6 +547,16 @@ video {
   }
 }
 
+a:hover {
+  --tw-text-opacity: 1;
+  color: rgb(103 65 136 / var(--tw-text-opacity));
+}
+
+a:active {
+  --tw-text-opacity: 1;
+  color: rgb(43 05 76 / var(--tw-text-opacity));
+}
+
 h1 {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -1226,11 +1236,6 @@ a:hover, button:hover {
 
 .active\:border-b-2:active {
   border-bottom-width: 2px;
-}
-
-.active\:text-custom-bege:active {
-  --tw-text-opacity: 1;
-  color: rgb(247 239 229 / var(--tw-text-opacity));
 }
 
 @media (min-width: 1024px) {
