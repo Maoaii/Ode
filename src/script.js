@@ -9,7 +9,9 @@ const historyImageInput = document.getElementById("image-input");
 
 
 const pastHistoryElements = [
-  {day: "01", month: "04", year: "2019", imagePath: "public/assets/img/elementor-placeholder-image.webp", description: "hello", historyIndex: 0, isPast: true}
+  {day: "01", month: "04", year: "2019", imagePath: "public/assets/img/elementor-placeholder-image.webp", description: "hello", historyIndex: 0, isPast: true},
+  {day: "06", month: "02", year: "2019", imagePath: "public/assets/img/historyphotos/2019-02-06.jpeg", description: "hello!", historyIndex: 1, isPast: true
+}
 ];
 let historyElements = [];
 let currentIndex = 0;
