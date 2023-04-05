@@ -9,9 +9,23 @@ const historyImageInput = document.getElementById("image-input");
 
 
 const pastHistoryElements = [
-  {day: "01", month: "04", year: "2019", imagePath: "public/assets/img/elementor-placeholder-image.webp", description: "hello", historyIndex: 0, isPast: true},
-  {day: "06", month: "02", year: "2019", imagePath: "public/assets/img/historyphotos/2019-02-06.jpeg", description: "hello!", historyIndex: 1, isPast: true
-}
+  {day: "06", month: "02", year: "2019", imagePath: "public/assets/img/historyphotos/2019-02-06.jpeg", description: "hello!", historyIndex: 1, isPast: true},
+  {day: "06", month: "03", year: "2019", imagePath: "public/assets/img/historyphotos/2019-03-06.jpg", description: "hello!", historyIndex: 1, isPast: true},
+  {day: "31", month: "07", year: "2019", imagePath: "public/assets/img/historyphotos/2019-07-31.jpg", description: "hello!", historyIndex: 1, isPast: true},
+  {day: "15", month: "01", year: "2020", imagePath: "public/assets/img/historyphotos/2020-01-15.jpg", description: "hello!", historyIndex: 1, isPast: true},
+  {day: "26", month: "03", year: "2020", imagePath: "public/assets/img/historyphotos/2020-03-26.jpg", description: "hello!", historyIndex: 1, isPast: true},
+  {day: "30", month: "04", year: "2020", imagePath: "public/assets/img/historyphotos/2020-04-30.jpg", description: "hello!", historyIndex: 1, isPast: true},
+  {day: "27", month: "05", year: "2020", imagePath: "public/assets/img/historyphotos/2020-05-27.jpg", description: "hello!", historyIndex: 1, isPast: true},
+  {day: "15", month: "09", year: "2020", imagePath: "public/assets/img/historyphotos/2020-09-15.jpg", description: "hello!", historyIndex: 1, isPast: true},
+  {day: "27", month: "09", year: "2020", imagePath: "public/assets/img/historyphotos/2020-09-27.jpg", description: "hello!", historyIndex: 1, isPast: true},
+  {day: "20", month: "02", year: "2021", imagePath: "public/assets/img/historyphotos/2021-02-20.jpg", description: "hello!", historyIndex: 1, isPast: true},
+  {day: "21", month: "08", year: "2021", imagePath: "public/assets/img/historyphotos/2021-08-21.jpg", description: "hello!", historyIndex: 1, isPast: true},
+  {day: "11", month: "09", year: "2021", imagePath: "public/assets/img/historyphotos/2021-09-11.jpg", description: "hello!", historyIndex: 1, isPast: true},
+  {day: "18", month: "12", year: "2021", imagePath: "public/assets/img/historyphotos/2021-12-18.jpg", description: "hello!", historyIndex: 1, isPast: true},
+  {day: "14", month: "02", year: "2022", imagePath: "public/assets/img/historyphotos/2022-02-14.jpg", description: "hello!", historyIndex: 1, isPast: true},
+  {day: "13", month: "03", year: "2022", imagePath: "public/assets/img/historyphotos/2022-03-13.jpg", description: "hello!", historyIndex: 1, isPast: true},
+  {day: "08", month: "04", year: "2022", imagePath: "public/assets/img/historyphotos/2022-04-08.jpg", description: "hello!", historyIndex: 1, isPast: true},
+  {day: "17", month: "08", year: "2022", imagePath: "public/assets/img/historyphotos/2022-08-17.jpg", description: "hello!", historyIndex: 1, isPast: true},
 ];
 let historyElements = [];
 let currentIndex = 0;
