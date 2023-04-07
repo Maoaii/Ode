@@ -16,7 +16,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Maoaii/Ode">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="/public/assets/img/icon-medium.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Ode</h3>
@@ -51,7 +51,47 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+HomePage
+<img src="./public/assets/img/screenshots/1.png">
+<br />
+<br />
+<br />
+
+Introduction
+<img src="./public/assets/img/screenshots/2.png">
+<br />
+<br />
+<br />
+
+About you Page
+<img src="./public/assets/img/screenshots/3.png">
+<br />
+<br />
+<br />
+
+History Page header
+<img src="./public/assets/img/screenshots/4.png">
+<br />
+<br />
+<br />
+
+History Page Elements
+<img src="./public/assets/img/screenshots/5.png">
+<br />
+<br />
+<br />
+
+History Page Add Elements
+<img src="./public/assets/img/screenshots/6.png">
+<br />
+<br />
+<br />
+
+Motivation Page
+<img src="./public/assets/img/screenshots/7.png">
+<br />
+<br />
+<br />
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
