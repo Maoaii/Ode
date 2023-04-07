@@ -34,7 +34,9 @@ let historyElements = [];
 let currentIndex = 0;
 let messages = [
   "A Martinha é desarrumada, muito dorminhoca e deixa uma pessoa louca com o seu despertador! Apesar disso tudo, é uma amiga protetora, muito doce, alegre e tenho muito orgulho nela. Amo-a muito!",
-  "Minha menina de ouro, orgulho da tua família. Não sabes bem quem eu sou mas eu te amo tanto mas tanto! Tenho um orgulho enorme em te ter na minh vida, love you 🤍"
+  "Minha menina de ouro, orgulho da tua família. Não sabes bem quem eu sou mas eu te amo tanto mas tanto! Tenho um orgulho enorme em te ter na minh vida, love you 🤍",
+  "Deixa de ser chata e vem dormir aqui!",
+  "Martinha, seja feliz, aproveita a vida, cresça, amplie horizontes. Mas não se esqueça de manter essa criança que há em ti sempre viva!",
 ];
 
 topButton.addEventListener("click", () => window.scrollTo({top: 0, behavior: "smooth"}));
