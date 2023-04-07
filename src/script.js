@@ -37,6 +37,8 @@ let messages = [
   "Minha menina de ouro, orgulho da tua família. Não sabes bem quem eu sou mas eu te amo tanto mas tanto! Tenho um orgulho enorme em te ter na minh vida, love you 🤍",
   "Deixa de ser chata e vem dormir aqui!",
   "Martinha, seja feliz, aproveita a vida, cresça, amplie horizontes. Mas não se esqueça de manter essa criança que há em ti sempre viva!",
+  "Vi-vos crescer juntos e digo com certeza que amor como este só se encontra uma vez na vida.",
+  "Martinha e luquinhas, parabéns por mais um ano juntos 🥳❤️. Espero que a vida vos sorria sempre, que concretizem todos os vossos sonhos e que continuem sempre a trazer ao de cima o melhor que há um no outro 🥰. Ps: se forem emigrar espero que seja para França 😂. Beijinhos seus fofos, sejam muito felizes"
 ];
 
 topButton.addEventListener("click", () => window.scrollTo({top: 0, behavior: "smooth"}));
