@@ -3,26 +3,38 @@
 @tailwind utilities;
 
 :root {
-    cursor: url(/img/cursor/icon_medium.png) -32 -32, auto;
+  cursor: url(assets/img/icon-medium.png) -32 -32, auto;
 }
 
 a:hover, button:hover {
-    cursor: url(/img/cursor/icon_hover.png) -32 -32, auto;
+  cursor: url(assets/img/icon-hover.png) -32 -32, auto;
 }
 
-a:active, button:active {
-    cursor: url(icon_click2.png), auto;
+header {
+  background-image: url(assets/img/bg.jpg);
+  background-position: center center;
+}
+
+@media screen and (min-width: 400px) {
+  header {
+    background-image: url(assets/img/bg3-cropped.jpeg);
+  }
+}
+
+
+*:active {
+    cursor: url(assets/img/icon-click.png), auto;
     animation-name: shoot;
     animation-duration: 0.5s;
 }
 
 @keyframes shoot {
     from {
-        cursor: url(/img/cursor/icon_click.png) 10 10, auto;
+        cursor: url(assets/img/icon-click.png) 10 10, auto;
     }
 
     to {
-        cursor: url(/img/cursor/icon_click2.png), auto;
+        cursor: url(assets/img/icon-click2.png), auto;
     }
 }
 
@@ -96,6 +108,21 @@ a:active, button:active {
 }
 
 @layer components {
+  a:hover {
+    @apply text-custom-purple;
+  }
+
+  a:active {
+    @apply text-custom-darker-purple;
+  }
+
+    h1 {
+      @apply lg:text-5xl md:text-4xl text-xl font-bold;
+    }
+
+    h2 {
+      @apply font-bold text-xl lg:text-2xl;
+    }
 
     input, textarea {
       @apply p-1 rounded-md;
@@ -106,30 +133,34 @@ a:active, button:active {
     }
 
     .history-h2 {
-        @apply text-lg text-center;
+      @apply text-lg lg:text-xl text-center;
     }
 
     .btn {
-        @apply hover:text-custom-light-purple;
+      @apply hover:text-custom-light-purple;
     }
 
     .dynamic-button {
-      @apply p-2 rounded-md shadow-md border-b-4  active:translate-y-1 active:border-b-0;
+      @apply lg:text-xl p-2 rounded-md shadow-md border-b-4  active:translate-y-1 active:border-b-0;
     }
 
     .line-break {
-        @apply w-1/4 rounded-full shadow-md border-4 border-custom-purple;
+      @apply w-1/4 rounded-full shadow-md border-4 border-custom-purple;
     }
 
     .title-box {
-        @apply p-4 h-16 text-xl flex justify-center items-center bg-custom-light-purple rounded-full shadow-md border-b-4 border-custom-purple;
+      @apply py-4 px-10 mx-auto text-xl flex justify-center items-center bg-custom-light-purple rounded-full shadow-md border-b-4 border-custom-purple;
     }
 
     .history-box {
-        @apply bg-custom-light-blue p-5 rounded-lg shadow-md border-b-4 border-custom-dark-blue;
+      @apply lg:w-1/2 md:w-1/2 max-w-sm lg:max-w-lg bg-custom-light-blue lg:p-5 md:p-5 p-3 rounded-lg shadow-md border-b-4 border-custom-dark-blue;
     }
 
     .date-circle {
-        @apply bg-custom-light-blue p-2 w-16 h-16 rounded-full grow-0 shrink-0 text-xs flex items-center;
+      @apply bg-custom-light-blue lg:w-24 lg:h-24 w-16 h-16 break-words rounded-full text-[0.6rem] lg:text-[0.8rem] flex place-content-center;
+    }
+
+    .expanded {
+      @apply rounded-md;
     }
 }

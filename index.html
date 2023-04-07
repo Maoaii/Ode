@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadata -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,144 +14,193 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet" href="/public/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./public/output.css">
     
-    <link rel="icon" type="image/x-icon" href="img/favicon_io/favicon-16x16.png">
-    <script src="src/script.js" defer></script>    
-    <script src="/src/jquery.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./public/assets/img/favicon-16x16.png">
+
+    <!-- Scripts -->
+    <script src="./src/script.js" defer></script>    
+    <script src="./src/jquery.js"></script>
 
     <!-- Title -->
     <title>Ode</title>
 </head>
-<body class="bg-bg-color text-font-color text-center font-Shantell cursor-baseline">
-    <button id="top-button" class="fixed hidden z-50 bottom-5 right-7 rounded-full bg-custom-purple-faded h-[60px]" 
-    title="Go to top"><span class="material-symbols-rounded text-6xl">expand_less</span></button>
+<body class="bg-bg-color text-font-color text-center font-Shantell text-md lg:text-lg" ontouchstart="">
+    <button id="top-button" class="fixed hidden z-50 bottom-5 right-7 rounded-full bg-custom-purple-faded h-[80px] w-[80px]" 
+    title="Go to top"><span class="material-symbols-rounded text-7xl">expand_less</span></button>
 
-    <header class="hidden min-h-screen w-screen bg-cover" style="background-image: url(img/elementor-placeholder-image.webp);">
-        <nav class="sticky top-5 max-w-[160px] mx-auto px-3 bg-custom-light-purple rounded-full shadow-md
-        border-b-2 border-custom-purple flex flex-row flex-wrap gap-1 place-content-between">
-    
-            <a href="#home">Home</a>
-    
-            <div id="menu" class="hidden">
-                <a href="#">Introdução</a>
-                <a href="#">Sobre ti...</a>
-                <a href="#">Nossa história</a>
-                <a href="#">Motivação</a>
-                <a href="#">Entretenimento</a>
+    <header class="hidden min-h-screen w-screen bg-cover">
+        <nav id="navbar" class="
+        relative top-5 max-w-[250px] mx-auto px-3 border-b-2 text-xl
+        bg-custom-light-purple border-custom-purple 
+        rounded-md shadow-md
+        lg:max-w-[400px] lg:text-3xl">
+
+            <div class="flex flex-row place-content-between">
+                <a href="#history-form">Faz História</a>
+                <a id="dropdown" href="javascript:void(0);">
+                    <i class="fa fa-bars"></i>
+                </a>
             </div>
     
-            <a id="dropdown" class="active:text-custom-bege" href="javascript:void(0);">
-                <i class="fa fa-bars"></i>
-            </a>
+            <div id="menu" class="hidden flex flex-col">
+                <hr class="border-none h-[2px] rounded-md bg-custom-purple">
+                <a href="#introdução">Introdução</a>
+
+                <hr class="border-none h-px rounded-md bg-custom-purple">
+                <a href="#sobre-ti">Sobre ti...</a>
+
+                <hr class="border-none h-px rounded-md bg-custom-purple">
+                <a href="#nossa-historia">Nossa história</a>
+
+                <hr class="border-none h-px rounded-md bg-custom-purple">
+                <a href="#motivacao">Motivação</a>
+            </div>
+    
         </nav>
     </header>
 
     <br>
 
     <main class="hidden flex flex-col items-center gap-20">
-        <section class="w-4/5 flex flex-col gap-12">
+        <section id="introdução" class="lg:w-3/4 w-4/5 flex flex-col gap-12">
             <div class="title-box ">
                 <h1>Breve Introdução</h1>
             </div>
 
             <p>
-                Lorem ipsum dolor sit amet consectetur. Potenti mollis sed aliquet amet tristique mi. 
-                Nisl augue amet a quam ullamcorper a scelerisque pharetra. 
+                <h2>
+                    Olá meu amor, feliz 4 anos de aniversário!
+                </h2>
+
+                Bem vinda á minha Ode para ti!
+                Deves estar a pensar: "mas que raio vem a ser isto?". Bem, tenho andado a trabalhar nesta
+                prenda há um tempo e queria que encapsulasse a essência da nossa relação.
+                <br>
+                <br>
+                Mais abaixo vais encontrar as seguintes secções: uma porção dedicada a ti e á tua personalidade;
+                uma secção bem grande com momentos engraçados e fofos do nosso relacionamento; por fim, uma zona
+                na qual pessoas próximas de ti escreveram mensagens diretamente para ti!
+                <br>
+                <br>
+                Espero que gostes do que preparei para ti ❤️
             </p>
-        
-            <video controls>
-                <source src="vids/placeholder.mov" type="video/mp4">
-            </video>
         </section>
 
         <hr class="line-break">
 
-        <section class="w-4/5 flex flex-col gap-12">
+        <section id="sobre-ti" class="lg:w-3/4 w-4/5 flex flex-col gap-12">
             <div class="title-box">
                 <h1>Um pouco sobre ti...</h1>
             </div>
 
-            <div class="flex flex-col items-center gap-12">
-                <div class="title-box w-3/5 h-10 text-xl">
-                    <h2>
-                        Lorem ipsum
-                    </h2>
-                </div>
+            <div class="flex lg:flex-row flex-col items-center gap-12">
 
                 <p>
-                    Lorem ipsum dolor sit amet consectetur. Potenti mollis sed aliquet amet tristique mi. 
-                    Nisl augue amet a quam ullamcorper a scelerisque pharetra. 
-                    Blandit tellus nunc nibh eu arcu nisi dolor sapien. Dolor justo morbi volutpat blandit. 
-                    Feugiat semper at sodales convallis felis molestie pulvinar at. 
+                    Por muito estranho que pareça, esta imagem caracteriza-te profundamente.
+                    Bem, sim, tu adoras cantar e dançar, mas não é só isso que te define. 
+                    <br>
+                    Tu tanto adoras snuggles como adoras aventuras radicais. Tu adoras snacks e, principalmente, aquelas viagens de ceia para
+                    o McDonald's mais próximo. Adoras mimos e mimas a dobrar de volta.
+                    Tu és divertida, energética, super querida e, acima de tudo, és a minha cara metade e a minha melhor amiga.
+                    Contigo tudo é mais simples: desde as rotinas do dia-a-dia, até às aventuras mais loucas que temos.
+                    <br>
+                    <br>
+                    Com isto, agradeço tudo o que fazes por mim e espero que gostes do que preparei para ti. 
+                    <br>
+                    <br>
+                    Love you ❤️.
                 </p>
 
-                <img class="rounded-xl" src="img/elementor-placeholder-image.webp" alt="">
+                <img class="rounded-xl lg:w-1/4" src="public/assets/img/about-you.jpg" alt="">
             </div>
         </section>
 
-        <div class="bg-custom-pink w-full py-10">
-            <section id="history-container" class="flex flex-col gap-12 w-4/5 mx-auto">
+        <div id="nossa-historia" class="bg-custom-pink w-full py-10">
+            <section class="flex flex-col gap-12 lg:w-3/4 w-4/5 mx-auto">
 
                 <div class="title-box bg-custom-light-blue border-custom-dark-blue">
                     <h1>A nossa História</h1>
                 </div>
 
-                <form id="history-form" action="#" class="flex items-center gap-4">
-                    <div class="date-circle">
-                        <p>Futuro...</p>
-                    </div>
+                <p>
+                    <h2>
+                        Bem vinda á nossa história!
+                    </h2>
+                    Vais encontrar aqui os momentos mais marcantes da nossa relação que nos levaram até aqui.
+                    Para além disso, vais poder construir a nossa história juntamente comigo aqui mesmo!
+                    <br>
+                    <br>
+                    Experimenta adicionar uma história de hoje no final desta secção. Vemo-nos lá em baixo!
+                </p>
 
-                    <div class="history-box flex flex-col gap-6">
-                        <label for="image-input">
-                            <h2 class="history-h2">Imagem*</h2>
+                <div id="history-container" class="w-full flex flex-col gap-12 mx-auto">
+                    <form id="history-form" action="#" class="flex items-center place-content-center gap-4">
+                        <div class="date-circle">
+                            <p class="my-auto p-2">Futuro...</p>
+                        </div>
+    
+                        <div class="history-box flex flex-col gap-6">
+                            <label for="image-input">
+                                <h2 class="history-h2">Imagem*</h2>
+    
+                                <div id="image-input-container" class="bg-white rounded-md flex flex-col place-content-center">
+                                    <span class="material-symbols-outlined">upload</span>
+                                    <p id="image-name" class="text-xs"></p>
+                                        
+                                    <input id="image-input" type="file" class="hidden ">
+                                </div>
+                            </label>
+    
+                            <label for="date-input">
+                                <h2 class="history-h2">Data*</h2>
+        
+                                <input id="date-input" type="date" class="w-full">
+                            </label>
+        
+        
+                            <label for="description-input">
+                                <h2 class="history-h2">Descrição*</h2>
+                                <textarea name="description-input" id="description-input" class="w-full" cols="18" rows="5"></textarea>
+                            </label>
+        
+                            <button type="submit" 
+                                class="dynamic-button bg-custom-light-purple border-b-4 border-custom-purple">
+    
+                                Molda a nossa história!
+                            </button>
+                        </div>
+                    </form>
+                </div>
 
-                            <div id="image-input-container" class="bg-white rounded-md flex flex-col place-content-center">
-                                <span class="material-symbols-outlined">upload</span>
-                                <p id="image-name" class="text-xs"></p>
-                                    
-                                <input id="image-input" type="file" class="hidden ">
-                            </div>
-                        </label>
-
-                        <label for="date-input">
-                            <h2 class="history-h2">Data*</h2>
-    
-                            <input id="date-input" type="date" class="w-full">
-                        </label>
-    
-    
-                        <label for="description-input">
-                            <h2 class="history-h2">Descrição*</h2>
-                            <textarea name="description-input" id="description-input" class="w-full" cols="18" rows="5"></textarea>
-                        </label>
-    
-                        <button type="submit" 
-                            class="dynamic-button bg-custom-light-purple border-b-4 border-custom-purple">
-
-                            Molda a nossa história!
-                        </button>
-                    </div>
-                </form>
+                
                 
             </section>
         </div>
 
-        <section class="flex flex-col w-4/5 mx-auto mb-20 h-80">
+        <section id="motivacao" class="flex flex-col w-4/5 mx-auto mb-20">
             <div class="title-box">
-                <h1>Quando precisares de motivação</h1>
+                <h1>Motivação</h1>
             </div>
 
             <div class="mt-10">
-                <p id="messages-container" class="break-words h-6">
-                    asdsadsaasdsadsaasdsadsaasdsadsaasdsadsaasdsadsaasdsadsaasdsadsaasdsadsa
+                <p>
+                    Aqui tens algumas mensagens das pessoas que estão mais próximas de ti, em anónimo claro :).
+                    Foram todas escritas com muito amor, portanto desfruta!
                 </p>
 
-                <button id="new-message-button" 
-                    class="dynamic-button mt-20 border-custom-dark-blue bg-custom-light-blue">
-                    Nova Mensagem
-                </button>
+                <p id="messages-container" class="break-words mt-8 p-4 border-4 border-custom-purple rounded-md">
+                    
+                </p>
+                
+                <div class="h-20 mt-20">
+                    <button id="new-message-button" 
+                        class="dynamic-button  border-custom-purple bg-custom-light-purple">
+                        Nova Mensagem
+                    </button>
+                </div>
             </div>
 
         </section class="flex flex-col w-4/5 min-h-screen mx-auto">

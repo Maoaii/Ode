@@ -1,3 +1,4 @@
+const nav = document.getElementById("navbar");
 const topButton = document.getElementById("top-button");
 const dropdown = document.getElementById("dropdown");
 const messagesContainer = document.getElementById("messages-container");
@@ -8,18 +9,53 @@ const historyImageInput = document.getElementById("image-input");
 
 
 const pastHistoryElements = [
-  {month: "04", year: "2019", imagePath: "img/elementor-placeholder-image.webp", description: "hello", historyIndex: 0, isPast: true}
+  {day: "06", month: "02", year: "2019", imagePath: "public/assets/img/historyphotos/2019-02-06.jpeg", description: "Lembras-te disto? Ainda não namorávamos e tivemos o nosso primeiro 'date'...\nFoi um momento muito querido e cheio de borboletas na barriga!", historyIndex: 1, isPast: true},
+  {day: "06", month: "03", year: "2019", imagePath: "public/assets/img/historyphotos/2019-03-06.jpg", description: "Pouco tempo depois desse date tive a oportunidade de fazer a primeira supresa e mostrar os meus dotes engatatões haha.", historyIndex: 1, isPast: true},
+  {day: "31", month: "07", year: "2019", imagePath: "public/assets/img/historyphotos/2019-07-31.jpg", description: "Já namorávamos há pouco tempo e fomos numa super viagem ao X! Verdade que não andámos em muita coisa, mas foi uma aventura em pêras!", historyIndex: 1, isPast: true},
+  {day: "15", month: "01", year: "2020", imagePath: "public/assets/img/historyphotos/2020-01-15.jpg", description: "Este momento é grande hahah! O início da tua super coleção de peluches para a cama. Trazê-lo até tua casa foi a melhor parte :).", historyIndex: 1, isPast: true},
+  // {day: "26", month: "03", year: "2020", imagePath: "public/assets/img/historyphotos/2020-03-26.jpg", description: "hello!", historyIndex: 1, isPast: true},
+  {day: "30", month: "04", year: "2020", imagePath: "public/assets/img/historyphotos/2020-04-30.jpg", description: "Estas aventuras com o Gladiador vão ficar para sempre marcadas e eternizadas aqui <3", historyIndex: 1, isPast: true},
+  // {day: "27", month: "05", year: "2020", imagePath: "public/assets/img/historyphotos/2020-05-27.jpg", description: "hello!", historyIndex: 1, isPast: true},
+  {day: "15", month: "09", year: "2020", imagePath: "public/assets/img/historyphotos/2020-09-15.jpg", description: "Mais um para a coleção! Nunca me vou cansar de ir ao oceanário, principalmente contigo!", historyIndex: 1, isPast: true},
+  // {day: "27", month: "09", year: "2020", imagePath: "public/assets/img/historyphotos/2020-09-27.jpg", description: "hello!", historyIndex: 1, isPast: true},
+  {day: "20", month: "02", year: "2021", imagePath: "public/assets/img/historyphotos/2021-02-20.jpg", description: "18 anitos da piquena! Foi a partir daqui que começaste a ganhar asas e tens crescido imenso desde então. Claro que tinha de haver uma com os zezocas hehe.", historyIndex: 1, isPast: true},
+  {day: "23", month: "05", year: "2021", imagePath: "public/assets/img/historyphotos/2021-05-23.jpeg", description: "Ests dates são incríveis e ir ao zoo foi um dos dates mais engraçados que tivemos! (aquele hack do McDonald's...)", historyIndex: 1, isPast: true},
+  {day: "21", month: "08", year: "2021", imagePath: "public/assets/img/historyphotos/2021-08-21.jpg", description: "Este verão foi repleto de casamentos e, vamos ser sincero, nós arrasámos todos.", historyIndex: 1, isPast: true},
+  {day: "11", month: "09", year: "2021", imagePath: "public/assets/img/historyphotos/2021-09-11.jpg", description: "Mais um casamento haha. Eles só são toleráveis quando te tenho como par <3", historyIndex: 1, isPast: true},
+  // {day: "18", month: "12", year: "2021", imagePath: "public/assets/img/historyphotos/2021-12-18.jpg", description: "", historyIndex: 1, isPast: true},
+  // {day: "14", month: "02", year: "2022", imagePath: "public/assets/img/historyphotos/2022-02-14.jpg", description: "", historyIndex: 1, isPast: true},
+  // {day: "13", month: "03", year: "2022", imagePath: "public/assets/img/historyphotos/2022-03-13.jpg", description: "hello!", historyIndex: 1, isPast: true},
+  {day: "08", month: "04", year: "2022", imagePath: "public/assets/img/historyphotos/2022-04-08.jpg", description: "Não há palavras para descrever o que esta viagem significou. Foi um dos melhores momentos de sempre e abriu horizontes para mais experiências dessas. Fica aqui a memória :P", historyIndex: 1, isPast: true},
+  {day: "17", month: "08", year: "2022", imagePath: "public/assets/img/historyphotos/2022-08-17.jpg", description: "Okay, esta era muito funny para não colocar haha. Foi um date aleatório e espontâneo que levou a momentos destes! Só tu mesmo :)", historyIndex: 1, isPast: true},
+  {day: "06", month: "10", year: "2022", imagePath: "public/assets/img/historyphotos/2022-10-06.jpg", description: "Só tenho a dizer: devíamos ter ganho!", historyIndex: 1, isPast: true},
+  {day: "04", month: "11", year: "2022", imagePath: "public/assets/img/historyphotos/2022-11-04.jpg", description: "Quem diria que até as coisas mais simples seriam tão divertidas acompanhado de ti?", historyIndex: 1, isPast: true},
 ];
 let historyElements = [];
 let currentIndex = 0;
-let messages = ["Hello", "How are you?", "I'm fine", "Goodbye"];
-
+let messages = [
+  "A Martinha é desarrumada, muito dorminhoca e deixa uma pessoa louca com o seu despertador! Apesar disso tudo, é uma amiga protetora, muito doce, alegre e tenho muito orgulho nela. Amo-a muito!",
+  "Minha menina de ouro, orgulho da tua família. Não sabes bem quem eu sou mas eu te amo tanto mas tanto! Tenho um orgulho enorme em te ter na minh vida, love you 🤍",
+  "Deixa de ser chata e vem dormir aqui!",
+  "Martinha, seja feliz, aproveita a vida, cresça, amplie horizontes. Mas não se esqueça de manter essa criança que há em ti sempre viva!",
+];
 
 topButton.addEventListener("click", () => window.scrollTo({top: 0, behavior: "smooth"}));
-dropdown.addEventListener("click", showDropdown);
 newMessageButton.addEventListener("click", displayNewMessage);
 historyForm.addEventListener("submit", submitHistoryEvent);
 historyImageInput.addEventListener("change", updateImageSaved);
+topButton.addEventListener("click", () => window.scrollTo({top: 0, behavior: "smooth"}));
+dropdown.addEventListener("click", () => document.getElementById("menu").classList.toggle("hidden"));
+newMessageButton.addEventListener("click", displayNewMessage);
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});
 
 // Event listeners for scrolling.
 // Make the "go to top" button appear when scrolling down.
@@ -36,6 +72,7 @@ $(window).on("load", function()  {
   setTimeout(showWebsite, 1000);
   getHistoryElements();
   getCurrentIndex();
+  displayNewMessage();
   saveData("image", null);
 });
 
@@ -50,7 +87,7 @@ function showWebsite() {
 
 // Past history elements that won't be available for change
 pastHistoryElements.forEach((historyElement) => {
-  addHistoryElement(historyElement.month, historyElement.year, 
+  addHistoryElement(historyElement.day, historyElement.month, historyElement.year, 
                     historyElement.imagePath, historyElement.description, historyElement.historyIndex, isPast=true);
 });
 
@@ -103,6 +140,7 @@ function submitHistoryEvent(event) {
   }
   
   const element = {
+    day: date[2],
     month: date[1],
     year: date[0],
     imagePath: image,
@@ -111,7 +149,7 @@ function submitHistoryEvent(event) {
   };
   
   historyElements.push(element);
-  addHistoryElement(element.month, element.year, element.imagePath, element.description, element.historyIndex);
+  addHistoryElement(element.day, element.month, element.year, element.imagePath, element.description, element.historyIndex);
 
   saveData("historyElements", historyElements);
   saveData("historyIndex", currentIndex);
@@ -142,37 +180,28 @@ function cleanInputs() {
   saveData("image", null);
 }
 
-function showDropdown() {
-    var x = document.getElementById("menu");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
 
-function addHistoryElement(month, year, imagePath, descriptionText, index, isPast) {
+
+function addHistoryElement(day, month, year, imagePath, descriptionText, index, isPast) {
   const container = document.createElement("div");
   const dateContainer = document.createElement("div");
   const date = document.createElement("p");
   const historyBox = document.createElement("div");
-  
   const image = document.createElement("img");
   const description = document.createElement("p");
 
-  container.classList.add("flex", "items-center", "gap-4");
-  container.setAttribute("data-historyIndex", index)
+  container.classList.add("flex", "items-center", "gap-4", "place-content-center");
   dateContainer.classList.add("date-circle");
   historyBox.classList.add("history-box");
   description.classList.add("mt-4");
+  date.classList.add("break-words", "my-auto", "p-2")
   
-
-  date.textContent = month + " - " + year;
+  container.setAttribute("data-historyIndex", index)
+  image.setAttribute("src", imagePath);
+  
+  date.textContent = day + "/" + month + "/" + year;
   description.textContent = descriptionText;
   
-
-  image.setAttribute("src", imagePath);
-
   if (!isPast) {
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "X";
@@ -207,11 +236,12 @@ function openConfirmationPopup(event) {
   
   popupContainer.classList.add("fixed", "top-1/3", "left-1/4", "w-1/2", "p-4", "bg-bg-color",
                                  "border-b-4", "border-custom-bege", "rounded-md", "shadow-md");
+  popupHeader.classList.add("lg:text-2xl")
   buttonContainer.classList.add("mt-2", "flex", "gap-2", "place-content-center");
   noButton.classList.add("border-b-4", "p-2", "dynamic-button", "bg-custom-light-purple",  "border-custom-purple");
-  yesButton.classList.add("border-b-4", "p-2", "dynamic-button", "bg-custom-light-purple",  "border-custom-purple");
+  yesButton.classList.add("border-2", "p-2", "dynamic-button",  "border-custom-purple", "active:border-b-2");
 
-  popupHeader.textContent = "Tens a certeza que queres apagar história?";
+  popupHeader.textContent = "Tens a certeza que queres apagar a história?";
   noButton.textContent = "Não";
   yesButton.textContent = "Sim";
 
@@ -251,7 +281,11 @@ function deleteHistory(event) {
 }
 
 function displayNewMessage() {
-  const newMessage = messages[Math.floor(Math.random() * messages.length)];
+  let newMessage = messages[Math.floor(Math.random() * messages.length)];
+
+  while (newMessage === messagesContainer.textContent) {
+    newMessage = messages[Math.floor(Math.random() * messages.length)];
+  }
 
   messagesContainer.textContent = newMessage;
 }
