@@ -57,7 +57,10 @@
 
 ### Built With
 
-- [![Next][next.js]][next-url]
+- [![HTML][html.com]][html-url]
+- [![CSS][css.com]][css-url]
+- [![JavaScript][javascript.com]][javascript-url]
+- [![local_storage][local_storage.com]][local_storage-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -92,9 +95,15 @@ Project Link: [https://maoaii.github.io/Ode/](https://maoaii.github.io/Ode/)
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/ucas-girotto-4530b9233
+[linkedin-url]: https://linkedin.com/in/lucas-girotto-4530b9233
 [product-screenshot]: images/screenshot.png
-[next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&
+[html.com]: https://img.shields.io/badge/HTML-orange?style=for-the-badge&&logoColor=white
+[html-url]: https://developer.mozilla.org/en-US/docs/Web/HTML
+[css.com]: https://img.shields.io/badge/CSS-blue?style=for-the-badge&&logoColor=white
 
-logoColor=white
-[next-url]: https://nextjs.org/
+[CSS-url]: [https://developer.mozilla.org/en-US/docs/Web/HTML](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+[javascript.com]: https://img.shields.io/badge/JS-yellow?style=for-the-badge&&logoColor=white
+[javascript-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+[local_storage.com]: https://img.shields.io/badge/local_storage-grey?style=for-the-badge&&logoColor=white
+[local_storage-url]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API
