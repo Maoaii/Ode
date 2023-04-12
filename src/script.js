@@ -114,7 +114,7 @@ function getCurrentIndex() {
   }
 }
 
-function updateImageSaved() {
+function updateImageSaved(event) {
   const image = historyImageInput.files[0];
   const imageName = document.getElementById("image-name");
   imageName.textContent = event.target.files[0].name;
